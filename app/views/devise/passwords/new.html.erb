@@ -1,0 +1,26 @@
+<section class="login-section">
+  <div class="container">
+    <div class="row login-container">
+      <div class="col-lg-5 col-md-6 login-info">
+        <h1 class="display-6 fw-bold">Dhio</h1>
+        <h2 class="mb-3">Esqueceu sua senha?</h2>
+        <p class="mb-4">Digite seu e-mail e enviaremos as instruções para redefinir sua senha.</p>
+      </div>
+      <div class="col-lg-7 col-md-6 login-form">
+        <div class="form-wrapper">
+          <div class="text-center mb-4">
+            <h2 class="fw-bold">Recuperação de Senha</h2>
+            <p class="text">Digite seu e-mail para enviar as instruções</p>
+          </div>
+          <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <%= f.input :email, placeholder: "Email", input_html: { class: "form-control" } %>
+            <%= f.button :submit, "Enviar instruções", class: "btn-submit" %>
+          <% end %>
+          <div class="links">
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

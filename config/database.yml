@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: menux-infra
+  password: Menuplague11235813
+  host: localhost
+
+development:
+  <<: *default
+  database: cardapio_template_development
+
+test:
+  <<: *default
+  database: cardapio_template_test
+
+production:
+  <<: *default
+  database: cardapio_template_production
