@@ -7,11 +7,13 @@ class ApplicationController < ActionController::Base
 
   def layout_by_controller
     if devise_controller?
-      "devise"
-    elsif controller_name == "home"
-      "home_application"
+      'devise'
+    elsif controller_name == 'home'
+      'home_application'
+    elsif controller_name == 'unidades'
+      'unidades_application' # Aqui está a modificação para o controlador 'unidades'
     else
-      "application"
+      'application'
     end
   end
 end

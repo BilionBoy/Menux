@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'home/index', as: 'home_index'
+  # Rotas para as unidades
+  get 'unidades/u_sabores_italia', to: 'unidades#u_sabores_italia', as: 'u_sabores_italia'
 end

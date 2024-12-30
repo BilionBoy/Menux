@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Metadados  -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <% # Dependências CSS %>
+    <%= stylesheet_link_tag "/assets/css/bootstrap.min.css",                                            "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "/assets/css/kaiadmin.css",                                                 "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "home_application",                                                         "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <% # App JS do projeto %>
+    <%= javascript_include_tag "/assets/js/core/jquery-3.7.1.min.js",                                   "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "/assets/js/core/popper.min.js",                                         "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "/assets/js/plugin/datatables/datatables.min.js",                        "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js",            "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "/assets/js/kaiadmin.min.js",                                            "data-turbo-track": "reload" %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
