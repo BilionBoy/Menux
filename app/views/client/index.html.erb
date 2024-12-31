@@ -1,0 +1,268 @@
+ <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-fire me-2"></i>Pizzaria Rústica do Pepeu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#pizzas">Pizzas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#entradas">Entradas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bebidas">Bebidas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobremesas">Sobremesas</a></li>
+        <li class="nav-item"><a class="nav-link active" href="carrinho.html"><i class="bi bi-cart"></i> Carrinho</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container my-5">
+  <header class="text-center mb-5">
+    <h1 class="display-2">Bem-vindo à Pizzaria do Pepeu</h1>
+    <p class="lead">Saboreie o autêntico sabor da Itália em cada fatia</p>
+  </header>
+  <div id="adminPanel" class="mb-5">
+    <h2>Painel de Administração</h2>
+    <form id="itemForm" class="mb-3">
+      <div class="row g-3">
+        <div class="col-md-3">
+          <input type="text" class="form-control" id="itemName" placeholder="Nome do item" required>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" id="itemDescription" placeholder="Descrição" required>
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" id="itemPrice" placeholder="Preço" step="0.01" required>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select" id="itemCategory" required>
+            <option value="">Categoria</option>
+            <option value="pizzas">Pizzas</option>
+            <option value="entradas">Entradas</option>
+            <option value="bebidas">Bebidas</option>
+            <option value="sobremesas">Sobremesas</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-primary w-100">Adicionar Item</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <section id="pizzas" class="mb-5">
+    <h2 class="section-title">Nossas Pizzas</h2>
+    <div id="pizzasContainer" class="row g-4"></div>
+  </section>
+  <section id="entradas" class="mb-5">
+    <h2 class="section-title">Entradas</h2>
+    <div id="entradasContainer" class="row g-4"></div>
+  </section>
+  <section id="bebidas" class="mb-5">
+    <h2 class="section-title">Bebidas</h2>
+    <div id="bebidasContainer" class="row g-4"></div>
+  </section>
+  <section id="sobremesas" class="mb-5">
+    <h2 class="section-title">Sobremesas</h2>
+    <div id="sobremesasContainer" class="row g-4"></div>
+  </section>
+</div>
+<div id="cart">
+  <h3>Seu Pedido</h3>
+  <div id="cartItems"></div>
+  <p>Total: R$ <span id="cartTotal">0.00</span></p>
+  <button id="clearCart" class="btn btn-outline-danger btn-sm">Limpar Carrinho</button>
+  <button id="checkout" class="btn btn-primary btn-sm">Finalizar Pedido</button>
+</div>
+<footer class="py-4 text-center">
+  <div class="container">
+    <p class="mb-0">&copy; 2024 Pizzaria do Pepeu. Todos os direitos reservados.</p>
+    <p class="mb-0">Rua das Pizzas, 123 - Bairro Italiano - Porto Velho - RO</p>
+    <p class="mb-0">Tel: (69) 1234-5678 | Email: contato@bellanapoli.com</p>
+  </div>
+</footer>
+<script>
+  let menuData = {
+      pizzas: [
+          { id: 'p1', name: "Margherita", description: "Molho de tomate, mozzarella fresca, manjericão", price: 39.90, image: "margherita.jpg" },
+          { id: 'p2', name: "Pepperoni", description: "Molho de tomate, mozzarella, pepperoni", price: 45.90, image: "pepperoni.jpg" },
+          { id: 'p3', name: "Quatro Queijos", description: "Molho de tomate, mozzarella, gorgonzola, parmesão, provolone", price: 49.90, image: "quatro-queijos.jpg" }
+      ],
+      entradas: [
+          { id: 'e1', name: "Bruschetta", description: "Fatias de pão italiano grelhado com tomate, alho e azeite", price: 18.90, image: "bruschetta.jpg" },
+          { id: 'e2', name: "Antipasto Misto", description: "Seleção de queijos, azeitonas, tomates secos e salame italiano", price: 32.90, image: "antipasto.jpg" }
+      ],
+      bebidas: [
+          { id: 'b1', name: "Vinho Tinto da Casa", description: "Taça 150ml", price: 18.90, image: "vinho.jpg" },
+          { id: 'b2', name: "Refrigerante", description: "Lata 350ml", price: 6.90, image: "refrigerante.jpg" }
+      ],
+      sobremesas: [
+          { id: 's1', name: "Tiramisù", description: "Clássica sobremesa italiana com café, mascarpone e cacau", price: 22.90, image: "tiramisu.jpg" },
+          { id: 's2', name: "Cannoli", description: "Massa crocante recheada com creme de ricota e gotas de chocolate", price: 19.90, image: "cannoli.jpg" }
+      ]
+  };
+
+  let cart = [];
+
+
+  function renderMenu() {
+      for (let category in menuData) {
+          const container = document.getElementById(`${category}Container`);
+          container.innerHTML = '';
+          menuData[category].forEach((item, index) => {
+              const itemElement = document.createElement('div');
+              itemElement.className = 'col-md-6 col-lg-4';
+              itemElement.innerHTML = `
+                  <div class="menu-item h-100">
+                      <div class="pizza-bg" style="background-image: url('${item.image}');"></div>
+                      <div class="p-3">
+                          <h3>${item.name}</h3>
+                          <p class="text-muted mb-2">${item.description}</p>
+                          <span class="price">R$ ${item.price.toFixed(2)}</span>
+                          <div class="mt-2">
+                              <button class="btn btn-sm btn-outline-primary edit-item" data-category="${category}" data-index="${index}">Editar</button>
+                              <button class="btn btn-sm btn-outline-danger delete-item" data-category="${category}" data-index="${index}">Excluir</button>
+                              <button class="btn btn-sm btn-success add-to-cart" data-category="${category}" data-index="${index}">Adicionar ao Carrinho</button>
+                          </div>
+                      </div>
+                  </div>
+              `;
+              container.appendChild(itemElement);
+          });
+      }
+
+
+      document.querySelectorAll('.edit-item').forEach(button => {
+          button.addEventListener('click', editItem);
+      });
+      document.querySelectorAll('.delete-item').forEach(button => {
+          button.addEventListener('click', deleteItem);
+      });
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+          button.addEventListener('click', addToCart);
+      });
+  }
+
+
+  function addItem(event) {
+      event.preventDefault();
+      const name = document.getElementById('itemName').value;
+      const description = document.getElementById('itemDescription').value;
+      const price = parseFloat(document.getElementById('itemPrice').value);
+      const category = document.getElementById('itemCategory').value;
+
+      if (category && name && description && !isNaN(price)) {
+          const newItem = {
+              id: `${category[0]}${menuData[category].length + 1}`,
+              name,
+              description,
+              price,
+              image: 'default.jpg'
+          };
+          menuData[category].push(newItem);
+          renderMenu();
+          event.target.reset();
+      }
+  }
+
+  function editItem(event) {
+      const category = event.target.dataset.category;
+      const index = event.target.dataset.index;
+      const item = menuData[category][index];
+
+      document.getElementById('itemName').value = item.name;
+      document.getElementById('itemDescription').value = item.description;
+      document.getElementById('itemPrice').value = item.price;
+      document.getElementById('itemCategory').value = category;
+
+      menuData[category].splice(index, 1);
+      renderMenu();
+
+      document.getElementById('itemName').focus();
+  }
+
+  function deleteItem(event) {
+      const category = event.target.dataset.category;
+      const index = event.target.dataset.index;
+
+      if (confirm('Tem certeza que deseja excluir este item?')) {
+          menuData[category].splice(index, 1);
+          renderMenu();
+      }
+  }
+
+  function addToCart(event) {
+      const category = event.target.dataset.category;
+      const index = event.target.dataset.index;
+      const item = menuData[category][index];
+
+      const existingItem = cart.find(cartItem => cartItem.id === item.id);
+      if (existingItem) {
+          existingItem.quantity += 1;
+      } else {
+          cart.push({ ...item, quantity: 1 });
+      }
+      updateCart();
+  }
+
+  function updateCart() {
+      const cartItems = document.getElementById('cartItems');
+      const cartTotal = document.getElementById('cartTotal');
+
+      cartItems.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+          const itemElement = document.createElement('div');
+          itemElement.className = 'cart-item';
+          itemElement.innerHTML = `
+              <span>${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</span>
+              <button class="btn btn-sm btn-outline-danger remove-from-cart" data-index="${index}">Remover</button>
+          `;
+          cartItems.appendChild(itemElement);
+          total += item.price * item.quantity;
+      });
+
+      cartTotal.textContent = total.toFixed(2);
+
+      document.querySelectorAll('.remove-from-cart').forEach(button => {
+          button.addEventListener('click', removeFromCart);
+      });
+  }
+
+  function removeFromCart(event) {
+      const index = event.target.dataset.index;
+      cart.splice(index, 1);
+      updateCart();
+  }
+
+  function clearCart() {
+      cart = [];
+      updateCart();
+  }
+
+  function checkout() {
+      if (cart.length === 0) {
+          alert('Seu carrinho está vazio!');
+          return;
+      }
+
+      let orderSummary = 'Resumo do Pedido:\n\n';
+      let total = 0;
+
+      cart.forEach(item => {
+          orderSummary += `${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}\n`;
+          total += item.price * item.quantity;
+      });
+
+      orderSummary += `\nTotal: R$ ${total.toFixed(2)}`;
+
+      alert(orderSummary + '\n\nObrigado por seu pedido!');
+      clearCart();
+  }
+
+  document.getElementById('itemForm').addEventListener('submit', addItem);
+
+  document.getElementById('clearCart').addEventListener('click', clearCart);
+  document.getElementById('checkout').addEventListener('click', checkout);
+
+  renderMenu();
+</script>

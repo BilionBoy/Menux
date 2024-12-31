@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Metadados  -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- CSS  -->
+    <%= stylesheet_link_tag "/assets/css/bootstrap.min.css",                                            "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "client",                                                              "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <%= yield %> <!-- O conteúdo principal vai aqui -->
+    <%= javascript_include_tag "/assets/js/core/bootstrap.bundle.js",                                         "data-turbo-track": "reload" %>
+  </body>
+</html>

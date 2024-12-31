@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
       "devise"
     elsif controller_name == "home"
       "home_application"
+    elsif controller_name == "client"
+      "client_application"
     else
       "application"
     end
