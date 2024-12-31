@@ -20098,3 +20098,1829 @@ ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
   
 ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
   
+Started GET "/" for ::1 at 2024-12-31 13:43:17 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 13:43:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 14.5ms | GC: 4.7ms)
+  Rendered layout layouts/devise.html.erb (Duration: 16.2ms | GC: 4.7ms)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 2.0ms (0 querys, 0 cached) | GC: 4.7ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2024-12-31 13:43:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/users/sign_in" for ::1 at 2024-12-31 13:43:23 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 169ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:43:23 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.8ms | GC: 1.1ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:44:26 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 9.2ms | GC: 0.5ms)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:44:58 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:46:33 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 13.7ms | GC: 4.3ms)
+Completed 200 OK in 22ms (Views: 14.4ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 4.7ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:01 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 1.4ms | GC: 1.1ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 18.5ms | GC: 9.3ms)
+Completed 200 OK in 49ms (Views: 21.6ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 31.4ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:09 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 13.3ms | GC: 3.5ms)
+Completed 200 OK in 23ms (Views: 14.1ms | ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 3.5ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:38 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 12.8ms | GC: 3.5ms)
+Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 3.5ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:44 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 14.1ms | GC: 4.0ms)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 4.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:44 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:51 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.9ms | GC: 1.3ms)
+Completed 200 OK in 22ms (Views: 11.6ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 4.5ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:51 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.9ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:51 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:52 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:56 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 11.0ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 11.6ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:57 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:47:57 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:48:16 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 9.9ms | GC: 1.1ms)
+Completed 200 OK in 21ms (Views: 10.5ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 4.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:49:38 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource_name' for an instance of #<Class:0x00007152b3fc8fd8>):
+
+Causes:
+NameError (undefined local variable or method `resource_name' for an instance of #<Class:0x00007152b3fc8fd8>)
+    30:               <td>
+    31:                 <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+    32:                 <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+    33:                 <%= link_to "Cadastrar-se", new_registration_path(resource_name), class: "text" %>
+    34:               </td>
+    35:             </tr>
+    36:             <tr>
+  
+app/views/home/index.html.erb:33
+Started GET "/" for ::1 at 2024-12-31 13:50:29 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container-fluid " style="margin-top: 80px;">
+  <h1 class="header-title mb-4">Gerenciamento de Estabelecimentos</h1>
+  <!-- Barra de Pesquisa -->
+  <div class="search-bar">
+    <input type="text" class="form-control" id="searchInput" placeholder="Pesquise por nome ou tipo..." />
+  </div>
+  <!-- Botão para Adicionar Novo Estabelecimento -->
+  <div class="mb-4">
+    <button class="btn btn-success btn-lg">
+      <i class="fas fa-plus-circle"></i> Adicionar Novo Estabelecimento
+    </button>
+  </div>
+  <!-- Tabela com Dados de Estabelecimentos -->
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped" id="tableEstabelecimentos">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Exemplo de dados estáticos para os estabelecimentos -->
+            <tr>
+              <td>Pizzaria do Pepeu</td>
+              <td>Pizzaria</td>
+              <td>
+                <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+                <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+                <%= link_to "Cadastrar-se", client_index_path class: "text" %>
+              </td>
+            </tr>
+            <tr>
+              <td>Restaurante Gourmet</td>
+              <td>Restaurante</td>
+              <td>
+                <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+                <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Lanchonete X</td>
+              <td>Lanchonete</td>
+              <td>
+                <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+                <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Pizzaria Delícia</td>
+              <td>Pizzaria</td>
+              <td>
+                <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+                <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Restaurante Brasileiro</td>
+              <td>Restaurante</td>
+              <td>
+                <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+                <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Caso não haja dados -->
+  <div class="alert alert-info" role="alert">
+    Não há estabelecimentos cadastrados.
+  </div>
+</div>
+<style>
+  .table thead th {
+  background-color: #007bff;
+  color: white;
+  }
+  .btn-action {
+  font-size: 1.1rem;
+  }
+  .search-bar {
+  margin-bottom: 20px;
+  }
+  .alert-info {
+  margin-top: 20px;
+  }
+  .btn-success {
+  margin-bottom: 20px;
+  }
+  .header-title {
+  font-size: 2rem;
+  color: #007bff;
+  }
+  .card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+</style>
+):
+
+Causes:
+ActiveSupport::SyntaxErrorProxy (/home/dhiogo/projetos/github/Menux/app/views/home/index.html.erb:33: syntax error, unexpected label, expecting `do' or '{' or '('
+...r-se", client_index_path class: "text" ); @output_buffer.saf...
+...                         ^~~~~~
+)
+1:    <div class="container-fluid " style="margin-top: 80px;">
+2:      <h1 class="header-title mb-4">Gerenciamento de Estabelecimentos</h1>
+3:      <!-- Barra de Pesquisa -->
+4:      <div class="search-bar">
+5:        <input type="text" class="form-control" id="searchInput" placeholder="Pesquise por nome ou tipo..." />
+6:      </div>
+7:      <!-- Botão para Adicionar Novo Estabelecimento -->
+8:      <div class="mb-4">
+9:        <button class="btn btn-success btn-lg">
+10:          <i class="fas fa-plus-circle"></i> Adicionar Novo Estabelecimento
+11:        </button>
+12:      </div>
+13:      <!-- Tabela com Dados de Estabelecimentos -->
+14:      <div class="card">
+15:        <div class="card-body">
+16:          <div class="table-responsive">
+17:            <table class="table table-striped" id="tableEstabelecimentos">
+18:              <thead>
+19:                <tr>
+20:                  <th scope="col">Nome</th>
+21:                  <th scope="col">Tipo</th>
+22:                  <th scope="col">Ações</th>
+23:                </tr>
+24:              </thead>
+25:              <tbody>
+26:                <!-- Exemplo de dados estáticos para os estabelecimentos -->
+27:                <tr>
+28:                  <td>Pizzaria do Pepeu</td>
+29:                  <td>Pizzaria</td>
+30:                  <td>
+31:                    <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+32:                    <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+33:                    <%= link_to "Cadastrar-se", client_index_path class: "text" %>
+34:                  </td>
+35:                </tr>
+36:                <tr>
+37:                  <td>Restaurante Gourmet</td>
+38:                  <td>Restaurante</td>
+39:                  <td>
+40:                    <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+41:                    <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+42:                  </td>
+43:                </tr>
+44:                <tr>
+45:                  <td>Lanchonete X</td>
+46:                  <td>Lanchonete</td>
+47:                  <td>
+48:                    <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+49:                    <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+50:                  </td>
+51:                </tr>
+52:                <tr>
+53:                  <td>Pizzaria Delícia</td>
+54:                  <td>Pizzaria</td>
+55:                  <td>
+56:                    <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+57:                    <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+58:                  </td>
+59:                </tr>
+60:                <tr>
+61:                  <td>Restaurante Brasileiro</td>
+62:                  <td>Restaurante</td>
+63:                  <td>
+64:                    <button class="btn btn-warning btn-action"><i class="fas fa-edit"></i> Editar</button>
+65:                    <button class="btn btn-danger btn-action"><i class="fas fa-trash-alt"></i> Excluir</button>
+66:                  </td>
+67:                </tr>
+68:              </tbody>
+69:            </table>
+70:          </div>
+71:        </div>
+72:      </div>
+73:      <!-- Caso não haja dados -->
+74:      <div class="alert alert-info" role="alert">
+75:        Não há estabelecimentos cadastrados.
+76:      </div>
+77:    </div>
+78:    <style>
+79:      .table thead th {
+80:      background-color: #007bff;
+81:      color: white;
+82:      }
+83:      .btn-action {
+84:      font-size: 1.1rem;
+85:      }
+86:      .search-bar {
+87:      margin-bottom: 20px;
+88:      }
+89:      .alert-info {
+90:      margin-top: 20px;
+91:      }
+92:      .btn-success {
+93:      margin-bottom: 20px;
+94:      }
+95:      .header-title {
+96:      font-size: 2rem;
+97:      color: #007bff;
+98:      }
+99:      .card {
+100:      margin-top: 20px;
+101:      border-radius: 10px;
+102:      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+103:      }
+104:    </style>
+  
+app/views/home/index.html.erb:33: syntax error, unexpected label, expecting `do' or '{' or '('
+Started GET "/" for ::1 at 2024-12-31 13:51:32 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 12.7ms | GC: 2.6ms)
+Completed 200 OK in 25ms (Views: 13.5ms | ActiveRecord: 3.3ms (1 query, 0 cached) | GC: 4.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:51:34 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:51:58 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.4ms | GC: 0.5ms)
+Completed 200 OK in 20ms (Views: 11.3ms | ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started POST "/client/index" for ::1 at 2024-12-31 13:52:01 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/client/index"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:52:01 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:52:05 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 11.2ms | GC: 1.2ms)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:52:06 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for ::1 at 2024-12-31 13:52:06 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/margherita.jpg" for ::1 at 2024-12-31 13:52:06 -0400
+Started GET "/client/bruschetta.jpg" for ::1 at 2024-12-31 13:52:06 -0400
+Started GET "/client/quatro-queijos.jpg" for ::1 at 2024-12-31 13:52:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+Started GET "/client/pepperoni.jpg" for ::1 at 2024-12-31 13:52:06 -0400
+Started GET "/client/antipasto.jpg" for ::1 at 2024-12-31 13:52:06 -0400
+Started GET "/client/vinho.jpg" for ::1 at 2024-12-31 13:52:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for ::1 at 2024-12-31 13:52:07 -0400
+Started GET "/client/tiramisu.jpg" for ::1 at 2024-12-31 13:52:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.bundle.js.map"):
+  
+Started GET "/client/cannoli.jpg" for ::1 at 2024-12-31 13:52:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:52:09 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:53:04 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 13.5ms | GC: 4.1ms)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 4.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:53:05 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:53:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 4.2ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 3.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:53:06 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 5.1ms | GC: 2.3ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:53:06 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 3.2ms | GC: 0.9ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:53:07 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 3.2ms | GC: 0.8ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:53:42 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 1.0ms | GC: 0.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 12.0ms | GC: 1.6ms)
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 1.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:53:43 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:53:56 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 9.8ms | GC: 0.6ms)
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:53:57 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 3.0ms | GC: 0.5ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:53:58 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 4.0ms | GC: 1.0ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:53:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:53:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 5.2ms | GC: 0.2ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:54:18 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:54:19 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.7ms | GC: 0.7ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:54:38 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.0ms | GC: 0.9ms)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:54:44 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.7ms | GC: 0.9ms)
+Completed 200 OK in 20ms (Views: 11.4ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:54:55 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.5ms | GC: 0.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 12.3ms | GC: 1.9ms)
+Completed 200 OK in 21ms (Views: 13.0ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:54:57 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/client/index" for ::1 at 2024-12-31 13:54:58 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:55:03 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.8ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:55:45 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 9.6ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:55:46 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:56:24 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 13.5ms | GC: 2.1ms)
+Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 4.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:56:48 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.5ms | GC: 0.7ms)
+Completed 200 OK in 20ms (Views: 11.2ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:56:49 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:57:00 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 13.2ms | GC: 2.8ms)
+Completed 200 OK in 25ms (Views: 13.9ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 6.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:57:18 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.3ms | GC: 0.5ms)
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:57:19 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:57:27 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 9.6ms | GC: 0.4ms)
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/" for ::1 at 2024-12-31 13:57:49 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 11.5ms | GC: 1.1ms)
+Completed 200 OK in 20ms (Views: 12.2ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:57:50 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 4.8ms | GC: 4.2ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 6.5ms | GC: 4.2ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 4.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-12-31 13:59:24 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:59:24 -0400
+Processing by HomeController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 13:59:24 -0400
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 8.3ms | GC: 2.1ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 3.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 13:59:24 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 2.8ms | GC: 0.9ms)
+  Rendered layout layouts/devise.html.erb (Duration: 4.7ms | GC: 0.9ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started POST "/users/sign_in" for ::1 at 2024-12-31 13:59:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 175ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 13:59:29 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 5.8ms | GC: 2.2ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 2.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 13:59:32 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for ::1 at 2024-12-31 13:59:32 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/client/margherita.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+Started GET "/client/pepperoni.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/quatro-queijos.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+Started GET "/client/bruschetta.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+Started GET "/client/antipasto.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+Started GET "/client/tiramisu.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+Started GET "/client/vinho.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.bundle.js.map"):
+  
+Started GET "/client/refrigerante.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+Started GET "/client/cannoli.jpg" for ::1 at 2024-12-31 13:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+Started GET "/client/carrinho.html" for ::1 at 2024-12-31 14:00:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/carrinho.html"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2024-12-31 14:01:07 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 14:01:07 -0400
+Processing by HomeController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 14:01:07 -0400
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 4.9ms | GC: 2.7ms)
+  Rendered layout layouts/devise.html.erb (Duration: 6.2ms | GC: 2.7ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 14:01:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 6.7ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 2.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started POST "/users/sign_in" for ::1 at 2024-12-31 14:01:12 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 179ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 6.8ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 3.6ms | GC: 0.7ms)
+Completed 200 OK in 171ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started POST "/users/sign_in" for ::1 at 2024-12-31 14:01:16 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 174ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 14:01:16 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 4.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 14:01:20 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for ::1 at 2024-12-31 14:01:21 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.4ms | GC: 0.3ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/client/margherita.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+Started GET "/client/pepperoni.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+Started GET "/client/antipasto.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+Started GET "/client/bruschetta.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+Started GET "/client/quatro-queijos.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+Started GET "/client/vinho.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.bundle.js.map"):
+  
+Started GET "/client/tiramisu.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+Started GET "/client/cannoli.jpg" for ::1 at 2024-12-31 14:01:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2024-12-31 14:02:27 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 14:02:27 -0400
+Processing by HomeController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 14:02:27 -0400
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 14:02:27 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 5.3ms | GC: 3.1ms)
+  Rendered layout layouts/devise.html.erb (Duration: 7.1ms | GC: 3.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 3.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started POST "/users/sign_in" for ::1 at 2024-12-31 14:02:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 177ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 5.1ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 14:02:32 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 3.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 14:02:34 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for ::1 at 2024-12-31 14:02:34 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 3.5ms)
+
+
+Started GET "/client/index" for ::1 at 2024-12-31 14:02:36 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 1.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.bundle.js.map"):
+  
+Started GET "/client/margherita.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+Started GET "/client/antipasto.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+Started GET "/client/bruschetta.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+Started GET "/client/quatro-queijos.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+Started GET "/client/pepperoni.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+Started GET "/client/tiramisu.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+Started GET "/client/vinho.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/refrigerante.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+Started GET "/client/cannoli.jpg" for ::1 at 2024-12-31 14:02:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2024-12-31 14:04:38 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 14:04:38 -0400
+Processing by HomeController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 14:04:38 -0400
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 2.7ms | GC: 0.4ms)
+  Rendered layout layouts/devise.html.erb (Duration: 3.9ms | GC: 0.4ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-12-31 14:04:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started POST "/users/sign_in" for ::1 at 2024-12-31 14:04:44 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 176ms (ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/" for ::1 at 2024-12-31 14:04:44 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for ::1 at 2024-12-31 14:04:47 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for ::1 at 2024-12-31 14:04:48 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 4.2ms)
+
+
+Started GET "/client/margherita.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+Started GET "/client/bruschetta.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.bundle.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+Started GET "/client/quatro-queijos.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+Started GET "/client/pepperoni.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+Started GET "/client/antipasto.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+Started GET "/client/tiramisu.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+Started GET "/client/vinho.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/refrigerante.jpg" for ::1 at 2024-12-31 14:04:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+Started GET "/client/cannoli.jpg" for ::1 at 2024-12-31 14:04:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+Started GET "/" for ::1 at 2024-12-31 14:25:04 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 2.8ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
