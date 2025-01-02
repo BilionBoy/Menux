@@ -21924,3 +21924,864 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 16ms (Views: 2.8ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-01-02 07:33:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-01-02 07:33:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 14.0ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 72.2ms | GC: 15.5ms)
+Completed 200 OK in 102ms (Views: 77.9ms | ActiveRecord: 10.4ms (0 querys, 0 cached) | GC: 15.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-01-02 07:33:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-01-02 07:34:17 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 236ms (ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 07:34:17 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 30.8ms | GC: 11.6ms)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 11.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2025-01-02 07:34:20 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 07:34:20 -0400
+Processing by HomeController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-01-02 07:34:20 -0400
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-01-02 07:34:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-01-02 07:34:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 213ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 07:34:32 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.5ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 5.6ms | GC: 2.7ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 4.7ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 5.4ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.4ms | GC: 0.7ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/client/margherita.jpg" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+Started GET "/client/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+Started GET "/client/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+Started GET "/client/vinho.jpg" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+Started GET "/client/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+Started GET "/client/antipasto.jpg" for 127.0.0.1 at 2025-01-02 07:34:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+Started GET "/client/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 07:34:34 -0400
+Started GET "/client/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 07:34:34 -0400
+Started GET "/client/cannoli.jpg" for 127.0.0.1 at 2025-01-02 07:34:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 07:35:09 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 09:00:45 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 09:00:45 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/client/margherita.jpg" for 127.0.0.1 at 2025-01-02 09:00:45 -0400
+Started GET "/client/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 09:00:45 -0400
+Started GET "/client/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 09:00:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+Started GET "/client/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 09:00:46 -0400
+Started GET "/client/vinho.jpg" for 127.0.0.1 at 2025-01-02 09:00:46 -0400
+Started GET "/client/antipasto.jpg" for 127.0.0.1 at 2025-01-02 09:00:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 09:00:46 -0400
+Started GET "/client/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 09:00:46 -0400
+Started GET "/client/cannoli.jpg" for 127.0.0.1 at 2025-01-02 09:00:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 09:00:59 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.5ms | GC: 0.0ms)
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 34.8ms | GC: 1.0ms)
+Completed 200 OK in 112ms (Views: 41.1ms | ActiveRecord: 16.8ms (1 query, 0 cached) | GC: 36.7ms)
+
+
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.4ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/margherita.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+Started GET "/client/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+Started GET "/client/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+Started GET "/client/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+Started GET "/client/antipasto.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+Started GET "/client/vinho.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+Started GET "/client/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+Started GET "/client/cannoli.jpg" for 127.0.0.1 at 2025-01-02 09:09:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 09:09:10 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.5ms | GC: 0.4ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 09:09:11 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/margherita.jpg" for 127.0.0.1 at 2025-01-02 09:09:11 -0400
+Started GET "/client/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 09:09:11 -0400
+Started GET "/client/vinho.jpg" for 127.0.0.1 at 2025-01-02 09:09:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+Started GET "/client/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 09:09:11 -0400
+Started GET "/client/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 09:09:11 -0400
+Started GET "/client/antipasto.jpg" for 127.0.0.1 at 2025-01-02 09:09:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 09:09:12 -0400
+Started GET "/client/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 09:09:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+Started GET "/client/cannoli.jpg" for 127.0.0.1 at 2025-01-02 09:09:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+Started GET "/" for ::1 at 2025-01-02 11:15:10 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-02 11:15:10 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 12.0ms | GC: 0.2ms)
+  Rendered layout layouts/devise.html.erb (Duration: 14.5ms | GC: 0.2ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2025-01-02 11:15:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2025-01-02 11:15:17 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-02 11:15:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 4.2ms | GC: 1.2ms)
+  Rendered layout layouts/devise.html.erb (Duration: 5.3ms | GC: 1.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 11:20:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 401 Unauthorized in 36ms (ActiveRecord: 24.9ms (1 query, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-01-02 11:20:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 11.2ms | GC: 0.6ms)
+  Rendered layout layouts/devise.html.erb (Duration: 31.5ms | GC: 0.7ms)
+Completed 200 OK in 50ms (Views: 35.5ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 10.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-01-02 11:20:23 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 226ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 11:20:24 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 10.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/client/margherita.jpg" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+Started GET "/client/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+Started GET "/client/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+Started GET "/client/vinho.jpg" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+Started GET "/client/antipasto.jpg" for 127.0.0.1 at 2025-01-02 11:20:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+Started GET "/client/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 11:20:27 -0400
+Started GET "/client/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 11:20:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+Started GET "/client/cannoli.jpg" for 127.0.0.1 at 2025-01-02 11:20:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/bootstrap.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/core/popper.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2025-01-02 11:21:17 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 19ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 11:21:17 -0400
+Processing by HomeController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-01-02 11:21:17 -0400
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-01-02 11:21:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap.min.css.map"):
+  
+Started GET "/home/avatars" for 127.0.0.1 at 2025-01-02 11:21:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home/avatars"):
+  
+Started GET "/home/gridsystem" for 127.0.0.1 at 2025-01-02 11:21:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home/gridsystem"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:02:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 401 Unauthorized in 29ms (ActiveRecord: 18.0ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-01-02 13:02:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 14.6ms | GC: 0.8ms)
+  Rendered layout layouts/devise.html.erb (Duration: 35.4ms | GC: 0.8ms)
+Completed 200 OK in 53ms (Views: 39.0ms | ActiveRecord: 0.0ms (0 querys, 0 cached) | GC: 8.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-01-02 13:02:26 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 220ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:02:27 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 2.6ms | GC: 0.4ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/client/margherita.jpg" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+Started GET "/client/vinho.jpg" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+Started GET "/client/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+Started GET "/client/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+Started GET "/client/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+Started GET "/client/antipasto.jpg" for 127.0.0.1 at 2025-01-02 13:02:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 13:02:29 -0400
+Started GET "/client/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 13:02:29 -0400
+Started GET "/client/cannoli.jpg" for 127.0.0.1 at 2025-01-02 13:02:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/margherita.jpg" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+Started GET "/client/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+Started GET "/client/antipasto.jpg" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/antipasto.jpg"):
+  
+Started GET "/client/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+Started GET "/client/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+Started GET "/client/vinho.jpg" for 127.0.0.1 at 2025-01-02 13:05:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/bruschetta.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/vinho.jpg"):
+  
+Started GET "/client/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 13:05:51 -0400
+Started GET "/client/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 13:05:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/refrigerante.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
+  
+Started GET "/client/cannoli.jpg" for 127.0.0.1 at 2025-01-02 13:05:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
+  
+Started GET "/client/index.html" for 127.0.0.1 at 2025-01-02 13:06:15 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index.html" for 127.0.0.1 at 2025-01-02 13:06:17 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/client/index" for 127.0.0.1 at 2025-01-02 13:06:58 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:08:02 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 11.7ms | GC: 1.6ms)
+Completed 200 OK in 23ms (Views: 12.6ms | ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:08:18 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:08:25 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 13.9ms | GC: 4.0ms)
+Completed 200 OK in 24ms (Views: 14.6ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:08:32 -0400
+Processing by ClientController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/client_application.html.erb
+  Rendering client/index.html.erb within layouts/client_application
+  Rendered client/index.html.erb within layouts/client_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/client_application.html.erb (Duration: 7.6ms | GC: 1.0ms)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/margherita.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+Started GET "/pepperoni.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+Started GET "/antipasto.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/margherita.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pepperoni.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/antipasto.jpg"):
+  
+Started GET "/quatro-queijos.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+Started GET "/bruschetta.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+Started GET "/vinho.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/quatro-queijos.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/bruschetta.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vinho.jpg"):
+  
+Started GET "/refrigerante.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+Started GET "/tiramisu.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/tiramisu.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/refrigerante.jpg"):
+  
+Started GET "/cannoli.jpg" for 127.0.0.1 at 2025-01-02 13:08:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cannoli.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:16:41 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 12.5ms | GC: 2.8ms)
+Completed 200 OK in 32ms (Views: 13.2ms | ActiveRecord: 13.4ms (1 query, 0 cached) | GC: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:16:45 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:16:57 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_index_path' for an instance of #<Class:0x0000748cc9b33358>):
+
+Causes:
+NameError (undefined local variable or method `home_index_path' for an instance of #<Class:0x0000748cc9b33358>)
+    29:           <div class="collapse" id="dashboard">
+    30:             <ul class="nav nav-collapse">
+    31:               <li>
+    32:                 <a href="<%= home_index_path %>">
+    33:                   <span class="sub-item">Dashboard</span>
+    34:                 </a>
+    35:               </li>
+  
+app/views/shared/_sidebar.html.erb:32
+app/views/layouts/home_application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:17:00 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_index_path' for an instance of #<Class:0x0000748cc9b33358>):
+
+Causes:
+NameError (undefined local variable or method `home_index_path' for an instance of #<Class:0x0000748cc9b33358>)
+    29:           <div class="collapse" id="dashboard">
+    30:             <ul class="nav nav-collapse">
+    31:               <li>
+    32:                 <a href="<%= home_index_path %>">
+    33:                   <span class="sub-item">Dashboard</span>
+    34:                 </a>
+    35:               </li>
+  
+app/views/shared/_sidebar.html.erb:32
+app/views/layouts/home_application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2025-01-02 13:17:02 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.html.erb
+  Rendering home/index.html.erb within layouts/home_application
+  Rendered home/index.html.erb within layouts/home_application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.9ms | GC: 0.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | GC: 1.7ms)
+  Rendered layout layouts/home_application.html.erb (Duration: 24.0ms | GC: 14.0ms)
+Completed 200 OK in 33ms (Views: 24.8ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 14.1ms)
+
+
