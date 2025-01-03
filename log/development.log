@@ -22997,3 +22997,4 @@ ActionController::RoutingError (No route matches [GET] "/client/tiramisu.jpg"):
   
 ActionController::RoutingError (No route matches [GET] "/client/cannoli.jpg"):
   
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
