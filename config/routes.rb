@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :categorys
+  resources :establishments
   get "client/index"
   # Rotas para autenticação de usuário com controlador
   devise_for :users, controllers: { registrations: "users/registrations" }
