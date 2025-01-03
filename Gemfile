@@ -65,3 +65,7 @@ gem "htmlbeautifier"
 
 # Gem Devise para Autenticação
 gem "devise", "~> 4.9"
+
+# Gem para envio de arquivos
+gem 'image_processing', '~> 1.2' # Para transformar imagens
+gem 'mini_magick' # Para manipulação de imagens
