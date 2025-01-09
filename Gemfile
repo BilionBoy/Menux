@@ -83,10 +83,10 @@ gem "caxlsx_rails"
 gem "cocoon"
 
 # Identificador Unico Universal
-gem "uuid"
+# gem "uuid"
 
 # Autorização de usuários
 gem "cancancan"
 
 # Soft deleted_at
-gem "paranoia"
+# gem "paranoia"
