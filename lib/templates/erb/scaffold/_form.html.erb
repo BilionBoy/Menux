@@ -1,12 +1,34 @@
-<%# frozen_string_literal: true %>
-<%%= simple_form_for(@<%%= singular_table_name %>, html: { class: "container-fluid page-inner, style: "margin-top: 20px;" }) do |f| %>
-<!-- Renderizando o Header -->
-<%%= render "shared/scaffold/form_header" %>
-<div class="card">
-  <div class="card-body mt-5">
-    <%%= render "shared/scaffold/form_errors" %>
-    <%%= render "shared/scaffold/form_inputs", f: f %>
+<%%= simple_form_for(@<%= singular_table_name %>, html: { class: "container-fluid page-inner", style: "margin-top: 20px;" }) do |f| %>
+<!-- Cabeçalho do formulário -->
+<div class="page-header p-3 mb-4">
+  <div class="d-flex justify-content-between align-items-center">
+    <!-- Botão de Voltar e Título -->
+    <div class="d-flex align-items-center">
+      <%%= link_to <%= plural_table_name %>_path, class: "btn btn-light d-flex align-items-center me-3" do %>
+      <i class="fas fa-arrow-left me-2"></i> <!-- Ícone de Voltar -->
+      <%%= t("common.back", default: "Voltar") %>
+      <%% end %>
+    </div>
+    <%%= t(".header", default: "<%= singular_table_name.humanize %> Form") %>
   </div>
-  <%%= render "shared/scaffold/footer" %>
 </div>
-<%% end %>
+<div class="card">
+  <div class="card-body">
+    <!-- Campos do formulário -->
+    <div class="form-inputs">
+      <%% attributes.each do |attribute| %>
+        <div class="form-inputs">
+          <%- attributes.each do |attribute| -%>
+            <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>, input_html: { class: "form-control", style: "max-width: 500px;", placeholder: "<%= attribute.name.humanize %>" } %>
+          <%- end -%>
+        </div>
+        <%% end %>
+      </div>
+    </div>
+    <div class="card-footer">
+      <!-- Botões do formulário -->
+      <%%= f.submit t(".save", default: "Salvar"), class: "btn btn-primary" %>
+      <%%= link_to t("common.back", default: "Voltar"), <%= plural_table_name %>_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+  <%% end %>
