@@ -1,12 +1,52 @@
-
-<%= simple_form_for(@funcao) do |f| %>
-<%= f.error_notification %>
-<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-<div class="form-inputs">
-    <%= f.input :nome %>
-    <%= f.input :descricao %>
-</div>
-<div class="form-actions">
-  <%= f.button :submit %>
-</div>
+<%= simple_form_for(@funcao, html: { class: "container-fluid page-inner", style: "margin-top: 20px;" }) do |f| %>
+  <!-- Page Header -->
+  <div class="page-header p-3 mb-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Botão de Voltar e Título -->
+      <div class="d-flex align-items-center">
+        <%= link_to funcoes_path, class: "btn btn-light d-flex align-items-center me-3" do %>
+          <i class="fas fa-arrow-left me-2"></i> <!-- Ícone de Voltar -->
+          <%= t("common.back", default: "Voltar") %>
+        <% end %>
+        <h3 class="fw-bold mb-0"><%= t(".header", default: "Formulário de Função") %></h3>
+      </div>
+    </div>
+  </div>
+  <!-- Form Card -->
+  <div class="card ">
+    <div class="card-body mt-5">
+      <% if @funcao.errors.any? %>
+        <div class="alert alert-danger">
+          <h4><%= t("common.errors_title", default: "Por favor, corrija os seguintes erros:") %></h4>
+          <ul>
+            <% @funcao.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-inputs">
+        <!-- Campo Nome -->
+        <div class="form-group">
+          <%= f.input :nome, label: t("activerecord.attributes.funcao.nome", default: "Nome"), input_html: { class: "form-control", style: "max-width: 500px;", placeholder: t(".nome_placeholder", default: "Digite o nome da função"), aria_required: true }, wrapper_html: { class: "form-group" } %>
+          <% if @funcao.errors[:nome].present? %>
+            <small class="text-danger"><%= @funcao.errors[:nome].join(', ') %></small>
+          <% end %>
+        </div>
+        <!-- Campo Descrição -->
+        <div class="form-group">
+          <%= f.input :descricao, label: t("activerecord.attributes.funcao.descricao", default: "Descrição"), input_html: { class: "form-control", style: "max-width: 500px;", placeholder: t(".descricao_placeholder", default: "Descreva brevemente a função") }, wrapper_html: { class: "form-group" } %>
+          <% if @funcao.errors[:descricao].present? %>
+            <small class="text-danger"><%= @funcao.errors[:descricao].join(', ') %></small>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <!-- Card Footer -->
+    <div class="card-footer text-end">
+      <%= f.button :submit, t("common.save", default: "Salvar"), class: "btn btn-primary" %>
+      <%= link_to t("common.back", default: "Voltar"), funcoes_path, class: "btn btn-voltar" %>
+    </div>
+  </div>
 <% end %>
+<%= render "shared/scaffold/footer"%>

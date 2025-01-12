@@ -1,0 +1,22 @@
+<div class="container-fluid" style="margin-top: 100px;">
+  <p style="color: green"><%= notice %></p>
+  <!-- Cabeçalho da Página -->
+  <%= render "shared/scaffold/header" %>
+  <!-- Card de Tabela -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"><%= t("#{controller_name}.index.card_title", default: "#{controller_name.humanize} List") %></h4>
+      </div>
+      <div class="card-body">
+        <!-- Removido o campo de pesquisa aqui -->
+      </div>
+      <!-- Tabela de Registros -->
+      <%= render "shared/scaffold/table" %>
+    </div>
+  </div>
+</div>
+<!-- Footer Geral -->
+<%= render "shared/scaffold/footer" %>
+<!-- Scripts para DataTables -->
+<%= render "shared/scaffold/data_table" %>

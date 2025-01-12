@@ -1,0 +1,12 @@
+<script>
+  $(document).ready(function() {
+    var table = $('#<%= singular_table_name %>Table').DataTable({
+      "paging": true,
+      "searching": false, // Desativa a pesquisa no DataTable
+      "ordering": true,
+      "info": true,
+      "lengthChange": false, // Desativa o ajuste de número de itens por página
+      "pageLength": 10, // Número inicial de itens por página
+    });
+  });
+</script>
