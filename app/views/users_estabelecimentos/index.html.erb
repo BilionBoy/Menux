@@ -6,7 +6,7 @@
       <%= link_to root_path, class: "btn btn-light btn-sm me-3" do %>
         <i class="fa fa-arrow-left"></i> <!-- Ícone de Voltar -->
       <% end %>
-      <h1 class="mb-0"><%= t("common.users_estabelecimentos", default: "Users estabelecimentos") %></h1>
+      <h1 class="mb-0"><%= t("common.users_estabelecimentos", default: "Users Estabelecimentos") %></h1>
     </div>
     <!-- Botão para Criar Novo Users estabelecimento -->
     <%= link_to new_users_estabelecimento_path, class: "btn btn-incluir d-flex align-items-center" do %>
@@ -17,10 +17,10 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title"><%= t("common.users_estabelecimentos", default: "Users estabelecimentos") %></h4>
+        <h4 class="card-title"><%= t("common.users_estabelecimentos", default: "Users Estabelecimentos") %></h4>
       </div>
       <div class="card-body">
-        <!-- Removido o campo de pesquisa aqui -->
+        <!-- Campo de busca pode ser reintroduzido aqui se necessário -->
       </div>
       <!-- Tabela de Users estabelecimentos -->
       <div class="table-responsive">
@@ -28,14 +28,14 @@
           <thead>
             <tr>
               <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
-              <th><%= t("activerecord.attributes.users_estabelecimento.user", default: "User") %></th>
+              <th><%= t("activerecord.attributes.users_estabelecimento.user", default: "Usuário") %></th>
               <th><%= t("activerecord.attributes.users_estabelecimento.estabelecimento", default: "Estabelecimento") %></th>
             </tr>
           </thead>
           <tfoot>
             <tr>
               <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
-              <th><%= t("activerecord.attributes.users_estabelecimento.user", default: "User") %></th>
+              <th><%= t("activerecord.attributes.users_estabelecimento.user", default: "Usuário") %></th>
               <th><%= t("activerecord.attributes.users_estabelecimento.estabelecimento", default: "Estabelecimento") %></th>
             </tr>
           </tfoot>
@@ -51,12 +51,12 @@
                     <ul class="dropdown-menu" aria-labelledby="acoesDropdown<%= users_estabelecimento.id %>">
                       <li><%= link_to t("common.show", default: "Ver"), users_estabelecimento, class: "dropdown-item" %></li>
                       <li><%= link_to t("common.edit", default: "Editar"), edit_users_estabelecimento_path(users_estabelecimento), class: "dropdown-item" %></li>
-                      <li><%= link_to t("common.delete", default: "Excluir"), users_estabelecimento, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
+                      <li><%= button_to t("common.delete", default: "Excluir"), users_estabelecimento, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
                     </ul>
                   </div>
                 </td>
-                <td><%= users_estabelecimento.user %></td>
-                <td><%= users_estabelecimento.estabelecimento %></td>
+                <td><%= users_estabelecimento.user.nome %></td>
+                <td><%= users_estabelecimento.estabelecimento.nome %></td>
               </tr>
             <% end %>
           </tbody>
@@ -76,7 +76,7 @@
       "ordering": true,
       "info": true,
       "lengthChange": false, // Desativa o ajuste de número de itens por página
-      "pageLength": 10, // Número inicial de itens por página
+      "pageLength": 10 // Número inicial de itens por página
     });
   });
 </script>

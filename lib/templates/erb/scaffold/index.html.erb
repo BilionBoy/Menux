@@ -53,12 +53,18 @@
                     <ul class="dropdown-menu" aria-labelledby="acoesDropdown<%%= <%= singular_table_name %>.id %>">
                       <li><%%= link_to t("common.show", default: "Ver"), <%= singular_table_name %>, class: "dropdown-item" %></li>
                       <li><%%= link_to t("common.edit", default: "Editar"), edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: "dropdown-item" %></li>
-                      <li><%%= link_to t("common.delete", default: "Excluir"), <%= singular_table_name %>, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
+                      <li><%%= button_to t("common.delete", default: "Excluir"), <%= singular_table_name %>, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
                     </ul>
                   </div>
                 </td>
                 <% attributes.each do |attribute| %>
-                  <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+                  <% if attribute.reference? %>
+                    <!-- Atributo de associação (FK)-->
+                    <td><%%=<%= singular_table_name %>.<%= attribute.name.split('_id').first %>.nome if <%= singular_table_name %>.<%= attribute.name.split('_id').first %>.present? %></td>
+                  <% else %>
+                    <!--  Atributo comum -->
+                    <td><%%=<%= singular_table_name %>.<%= attribute.name %>%></td>
+                  <% end %>
                 <% end %>
               </tr>
               <%% end %>

@@ -3,7 +3,7 @@ class CategoriasController < ApplicationController
 
   # GET /categorias or /categorias.json
   def index
-    @categorias = Categoria.all
+    @categorias = Categoria.includes(:estabelecimento).all
   end
 
   # GET /categorias/1 or /categorias/1.json
@@ -22,6 +22,8 @@ class CategoriasController < ApplicationController
   # POST /categorias or /categorias.json
   def create
     @categoria = Categoria.new(categoria_params)
+    puts params[:categoria]  # Verifique se os parâmetros estão sendo enviados corretamente
+
 
     respond_to do |format|
       if @categoria.save

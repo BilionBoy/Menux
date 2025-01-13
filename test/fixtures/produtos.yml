@@ -5,11 +5,11 @@ one:
   descricao: MyText
   preco_unitario: 9.99
   preco_custo: 9.99
-  estabelecimento: one
+  categoria: one
 
 two:
   nome: MyString
   descricao: MyText
   preco_unitario: 9.99
   preco_custo: 9.99
-  estabelecimento: two
+  categoria: two

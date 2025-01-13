@@ -32,8 +32,7 @@
               <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
               <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
               <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
-              <th><%= t("activerecord.attributes.produto.estabelecimento", default: "Estabelecimento") %></th>
-              <th><%= t("activerecord.attributes.produto.imagem", default: "Imagem") %></th>
+              <th><%= t("activerecord.attributes.produto.categoria", default: "Categoria") %></th>
             </tr>
           </thead>
           <tfoot>
@@ -43,8 +42,7 @@
               <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
               <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
               <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
-              <th><%= t("activerecord.attributes.produto.estabelecimento", default: "Estabelecimento") %></th>
-              <th><%= t("activerecord.attributes.produto.imagem", default: "Imagem") %></th>
+              <th><%= t("activerecord.attributes.produto.categoria", default: "Categoria") %></th>
             </tr>
           </tfoot>
           <tbody>
@@ -59,7 +57,7 @@
                     <ul class="dropdown-menu" aria-labelledby="acoesDropdown<%= produto.id %>">
                       <li><%= link_to t("common.show", default: "Ver"), produto, class: "dropdown-item" %></li>
                       <li><%= link_to t("common.edit", default: "Editar"), edit_produto_path(produto), class: "dropdown-item" %></li>
-                      <li><%= link_to t("common.delete", default: "Excluir"), produto, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
+                      <li><%= button_to t("common.delete", default: "Excluir"), produto, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
                     </ul>
                   </div>
                 </td>
@@ -67,8 +65,7 @@
                 <td><%= produto.descricao %></td>
                 <td><%= produto.preco_unitario %></td>
                 <td><%= produto.preco_custo %></td>
-                <td><%= produto.estabelecimento %></td>
-                <td><%= produto.imagem %></td>
+                <td><%= produto.categoria.nome if produto.categoria.present? %></td>
               </tr>
             <% end %>
           </tbody>

@@ -28,8 +28,8 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
-            <%= f.label :estabelecimento_id, "Estabelecimento" %>
-            <%= f.collection_select :estabelecimento_id, Estabelecimento.all, :id, :nome, { prompt: "Selecione o estabelecimento" }, { class: "form-control", style: "max-width: 100%;" } %>          </div>
+            <%= f.association :estabelecimento, collection: Estabelecimento.all, label_method: :nome, value_method: :id, prompt: "Selecione um estabelecimento", input_html: { class: "form-control", style: "max-width: 100%;", title: "Informe estabelecimento" } %>
+          </div>
         </div>
       </div>
     </div>

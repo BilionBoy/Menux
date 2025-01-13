@@ -1,7 +1,7 @@
-class CreateCategorias < ActiveRecord::Migration[7.2]
+class CreateCategorias < ActiveRecord::Migration[7.0]
   def up
     create_table :categorias do |t|
-      t.string :nome
+      t.string :nome, null: false
       t.text :descricao
       t.references :estabelecimento, null: false, foreign_key: true
 

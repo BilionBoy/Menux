@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 class Produto < ApplicationRecord
-  belongs_to :estabelecimento
-  has_many :categoria_produtos
-  has_many :categorias, through: :categoria_produtos
-
-  # Adicionando a associação com Active Storage para a imagem
+  # Adicione aqui quaisquer métodos ou validações padrão para seus modelos
+  belongs_to :categoria
   has_one_attached :imagem
+
+  validates :nome, :descricao, :preco_unitario, :preco_custo, :categoria_id,  presence: true
 end

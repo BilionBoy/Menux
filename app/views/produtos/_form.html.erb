@@ -1,4 +1,4 @@
-<%= simple_form_for(@produto, html: { class: "container-fluid page-inner", style: "margin-top: 20px;" }) do |f| %>
+<%= simple_form_for(@produto, html: { class: "container-fluid page-inner", style: "margin-top: 20px;", multipart: true }) do |f| %>
   <!-- Cabeçalho do formulário -->
   <div class="page-header p-3 mb-4">
     <div class="d-flex justify-content-between align-items-center">
@@ -38,15 +38,12 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
-            <div class="col-12 col-md-6 mb-3">
-              <%= f.label :estabelecimento_id, "Estabelecimento" %>
-              <%= f.collection_select :estabelecimento_id, Estabelecimento.all, :id, :nome, { prompt: "Selecione o estabelecimento" }, { class: "form-control", style: "max-width: 100%;" } %>
-            </div>
+            <%= f.input :categoria_id, as: :select, collection: Categoria.all, label_method: :nome, value_method: :id, prompt: "Selecione uma categoria", input_html: { class: "form-control", style: "max-width: 100%;", title: "Informe categoria" } %>
           </div>
         </div>
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
-            <%= f.input :imagem, input_html: { class: "form-control", style: "max-width: 100%;", placeholder: "Imagem", title: "Informe imagem" } %>
+            <%= f.input :imagem, as: :file, input_html: { class: "form-control", title: "Selecione uma imagem" } %>
           </div>
         </div>
       </div>

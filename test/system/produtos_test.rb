@@ -14,8 +14,8 @@ class ProdutosTest < ApplicationSystemTestCase
     visit produtos_url
     click_on "New produto"
 
+    fill_in "Categoria", with: @produto.categoria_id
     fill_in "Descricao", with: @produto.descricao
-    fill_in "Estabelecimento", with: @produto.estabelecimento_id
     fill_in "Nome", with: @produto.nome
     fill_in "Preco custo", with: @produto.preco_custo
     fill_in "Preco unitario", with: @produto.preco_unitario
@@ -29,8 +29,8 @@ class ProdutosTest < ApplicationSystemTestCase
     visit produto_url(@produto)
     click_on "Edit this produto", match: :first
 
+    fill_in "Categoria", with: @produto.categoria_id
     fill_in "Descricao", with: @produto.descricao
-    fill_in "Estabelecimento", with: @produto.estabelecimento_id
     fill_in "Nome", with: @produto.nome
     fill_in "Preco custo", with: @produto.preco_custo
     fill_in "Preco unitario", with: @produto.preco_unitario

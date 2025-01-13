@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :funcoes
   resources :estabelecimentos
   resources :users_estabelecimentos
-  resources :categoria_produtos
   resources :produtos
   resources :categorias
 

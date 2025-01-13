@@ -1,2 +1,0 @@
-module CategoriaProdutosHelper
-end
