@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_13_042848) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_13_040426) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,9 +45,9 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_042848) do
   create_table "categoria_produtos", force: :cascade do |t|
     t.bigint "categoria_id", null: false
     t.bigint "produto_id", null: false
+    t.bigint "estabelecimento_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "estabelecimento_id"
     t.index ["categoria_id"], name: "index_categoria_produtos_on_categoria_id"
     t.index ["estabelecimento_id"], name: "index_categoria_produtos_on_estabelecimento_id"
     t.index ["produto_id"], name: "index_categoria_produtos_on_produto_id"
