@@ -38,6 +38,17 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <%= f.label :estabelecimento_id, "Estabelecimento", class: "form-label" %>
+            <div class="input-group">
+              <%= f.collection_select :estabelecimento_id, Estabelecimento.all, :id, :nome, { prompt: "Selecione o Estabelecimento" }, { class: "form-control", style: "max-width: 100%;" } %>
+              <span class="input-group-text">
+                <i class="fas fa-chevron-down"></i> <!-- Ícone de seta para baixo -->
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="card-footer">
         <!-- Botões do formulário -->
