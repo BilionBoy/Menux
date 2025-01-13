@@ -59,7 +59,7 @@
                 </td>
                 <td><%= categoria.nome %></td>
                 <td><%= categoria.descricao %></td>
-                <td><%= categoria.estabelecimento %></td>
+                <td><%= categoria.estabelecimento.nome if categoria.estabelecimento.present? %></td>
               </tr>
             <% end %>
           </tbody>

@@ -3,7 +3,7 @@ class UsersEstabelecimentosController < ApplicationController
 
   # GET /users_estabelecimentos or /users_estabelecimentos.json
   def index
-    @users_estabelecimentos = UsersEstabelecimento.all
+    @users_estabelecimentos = UsersEstabelecimento.includes(:user, :estabelecimento).all
   end
 
   # GET /users_estabelecimentos/1 or /users_estabelecimentos/1.json

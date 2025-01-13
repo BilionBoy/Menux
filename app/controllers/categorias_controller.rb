@@ -3,7 +3,7 @@ class CategoriasController < ApplicationController
 
   # GET /categorias or /categorias.json
   def index
-    @categorias = Categoria.all
+    @categorias = Categoria.includes(:estabelecimento).all
   end
 
   # GET /categorias/1 or /categorias/1.json

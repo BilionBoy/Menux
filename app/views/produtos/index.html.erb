@@ -32,7 +32,7 @@
               <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
               <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
               <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
-              <th><%= t("activerecord.attributes.produto.categoria.nome", default: "Categoria") %></th>
+              <th><%= t("activerecord.attributes.produto.categoria", default: "Categoria") %></th>
             </tr>
           </thead>
           <tfoot>
@@ -42,7 +42,7 @@
               <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
               <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
               <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
-              <th><%= t("activerecord.attributes.produto.categoria.nome", default: "Categoria") %></th>
+              <th><%= t("activerecord.attributes.produto.categoria", default: "Categoria") %></th>
             </tr>
           </tfoot>
           <tbody>
@@ -65,7 +65,7 @@
                 <td><%= produto.descricao %></td>
                 <td><%= produto.preco_unitario %></td>
                 <td><%= produto.preco_custo %></td>
-                <td><%= produto.categoria %></td>
+                <td><%= produto.categoria.nome if produto.categoria.present? %></td>
               </tr>
             <% end %>
           </tbody>
