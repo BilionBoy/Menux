@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  resources :users_estabelecimentos
-  resources :estabelecimentos
+  # Autenticação
   devise_for :users, controllers: { registrations: "users/registrations" }
+
+  # Rota Index
   root "home#index"
   get "home/index"
+
+  # Rotas Dinâmicas
+  resources :users_estabelecimentos
+  resources :estabelecimentos
   resources :funcoes
 
   # Status HTTP da aplicação
