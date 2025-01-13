@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_13_040426) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_13_035050) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,24 +42,15 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_040426) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "categoria_produtos", force: :cascade do |t|
-    t.bigint "categoria_id", null: false
-    t.bigint "produto_id", null: false
-    t.bigint "estabelecimento_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["categoria_id"], name: "index_categoria_produtos_on_categoria_id"
-    t.index ["estabelecimento_id"], name: "index_categoria_produtos_on_estabelecimento_id"
-    t.index ["produto_id"], name: "index_categoria_produtos_on_produto_id"
-  end
-
-  create_table "categorias", force: :cascade do |t|
+  create_table "cardapios", force: :cascade do |t|
+    t.string "descricao"
+    t.string "valor"
     t.string "nome"
-    t.text "descricao"
-    t.bigint "estabelecimento_id", null: false
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["estabelecimento_id"], name: "index_categorias_on_estabelecimento_id"
   end
 
   create_table "estabelecimentos", force: :cascade do |t|
@@ -77,19 +68,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_040426) do
     t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "produtos", force: :cascade do |t|
-    t.string "nome"
-    t.text "descricao"
-    t.decimal "preco_unitario"
-    t.decimal "preco_custo"
-    t.bigint "estabelecimento_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "imagem_id"
-    t.index ["estabelecimento_id"], name: "index_produtos_on_estabelecimento_id"
-    t.index ["imagem_id"], name: "index_produtos_on_imagem_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -126,12 +104,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_040426) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "categoria_produtos", "categorias"
-  add_foreign_key "categoria_produtos", "estabelecimentos"
-  add_foreign_key "categoria_produtos", "produtos"
-  add_foreign_key "categorias", "estabelecimentos"
-  add_foreign_key "produtos", "active_storage_attachments", column: "imagem_id"
-  add_foreign_key "produtos", "estabelecimentos"
   add_foreign_key "users", "funcoes"
   add_foreign_key "users_estabelecimentos", "estabelecimentos"
   add_foreign_key "users_estabelecimentos", "users"
