@@ -1,0 +1,85 @@
+<div class="container-fluid" style="margin-top: 100px;">
+  <p style="color: green"><%= notice %></p>
+  <!-- Título da Página com ícone de Voltar e Botão Incluir -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex align-items-center">
+      <%= link_to root_path, class: "btn btn-light btn-sm me-3" do %>
+        <i class="fa fa-arrow-left"></i> <!-- Ícone de Voltar -->
+      <% end %>
+      <h1 class="mb-0"><%= t("common.estabelecimentos", default: "Estabelecimentos") %></h1>
+    </div>
+    <!-- Botão para Criar Novo Estabelecimento -->
+    <%= link_to new_estabelecimento_path, class: "btn btn-incluir d-flex align-items-center" do %>
+      <i class="fa fa-plus me-2"></i> <%= t("common.new_estabelecimento", default: "Incluir") %>
+    <% end %>
+  </div>
+  <!-- Card de Estabelecimentos -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"><%= t("common.estabelecimentos", default: "Estabelecimentos") %></h4>
+      </div>
+      <!-- Tabela de Estabelecimentos -->
+      <div class="table-responsive">
+        <table id="estabelecimentosTable" class="table table-striped table-hover display" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.nome", default: "Nome") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.cnpj", default: "CNPJ") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.endereco", default: "Endereço") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.telefone", default: "Telefone") %></th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.nome", default: "Nome") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.cnpj", default: "CNPJ") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.endereco", default: "Endereço") %></th>
+              <th><%= t("activerecord.attributes.estabelecimento.telefone", default: "Telefone") %></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <% @estabelecimentos.each do |estabelecimento| %>
+              <tr>
+                <td class="text-center">
+                  <!-- Dropdown de Ações -->
+                  <div class="dropdown">
+                    <button class="btn btn-sm dropdown-toggle" type="button" id="acoesDropdown<%= estabelecimento.id %>" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-cog"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="acoesDropdown<%= estabelecimento.id %>">
+                      <li><%= link_to t("common.show", default: "Ver"), estabelecimento, class: "dropdown-item" %></li>
+                      <li><%= link_to t("common.edit", default: "Editar"), edit_estabelecimento_path(estabelecimento), class: "dropdown-item" %></li>
+                      <li><%= button_to t("common.delete", default: "Excluir"), estabelecimento, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
+                    </ul>
+                  </div>
+                </td>
+                <td><%= estabelecimento.nome %></td>
+                <td><%= estabelecimento.cnpj %></td>
+                <td><%= estabelecimento.endereco %></td>
+                <td><%= estabelecimento.telefone %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer Geral -->
+<%= render "shared/scaffold/footer" %>
+<!-- Scripts para DataTables -->
+<script>
+  $(document).ready(function() {
+    var table = $('#estabelecimentosTable').DataTable({
+      "paging": true,
+      "searching": false, // Desativa a pesquisa no DataTable
+      "ordering": true,
+      "info": true,
+      "lengthChange": false, // Desativa o ajuste de número de itens por página
+      "pageLength": 10, // Número inicial de itens por página
+    });
+  });
+</script>
