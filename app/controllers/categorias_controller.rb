@@ -22,6 +22,8 @@ class CategoriasController < ApplicationController
   # POST /categorias or /categorias.json
   def create
     @categoria = Categoria.new(categoria_params)
+    puts params[:categoria]  # Verifique se os parâmetros estão sendo enviados corretamente
+
 
     respond_to do |format|
       if @categoria.save

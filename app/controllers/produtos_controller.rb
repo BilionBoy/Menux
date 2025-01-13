@@ -8,6 +8,7 @@ class ProdutosController < ApplicationController
 
   # GET /produtos/1 or /produtos/1.json
   def show
+    @produto = Produto.find(params[:id])
   end
 
   # GET /produtos/new
@@ -22,6 +23,7 @@ class ProdutosController < ApplicationController
   # POST /produtos or /produtos.json
   def create
     @produto = Produto.new(produto_params)
+    puts params[:categoria]  # Adicione essa linha para verificar os parâmetros recebidos
 
     respond_to do |format|
       if @produto.save
@@ -65,6 +67,6 @@ class ProdutosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def produto_params
-      params.require(:produto).permit(:nome, :descricao, :preco_unitario, :preco_custo, :categoria_id)
+      params.require(:produto).permit(:nome, :descricao, :preco_unitario, :preco_custo, :categoria_id, :imagem)
     end
 end
