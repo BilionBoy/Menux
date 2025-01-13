@@ -65,6 +65,6 @@ class CategoriaProdutosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def categoria_produto_params
-      params.require(:categoria_produto).permit(:categoria_id, :produto_id)
+      params.require(:categoria_produto).permit(:categoria_id, :produto_id, :estabelecimento_id)
     end
 end

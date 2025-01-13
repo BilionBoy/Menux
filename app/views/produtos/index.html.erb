@@ -5,64 +5,50 @@
     <div class="d-flex align-items-center">
       <%= link_to root_path, class: "btn btn-light btn-sm me-3" do %>
         <i class="fa fa-arrow-left"></i> <!-- Ícone de Voltar -->
-        <% end %>
-        <h1 class="mb-0"><%= t("common.produtos", default: "Produtos") %></h1>
-      </div>
-      <!-- Botão para Criar Novo Produto -->
-      <%= link_to new_produto_path, class: "btn btn-incluir d-flex align-items-center" do %>
-      <i class="fa fa-plus me-2"></i> <%= t("common.new_produto", default: "Incluir") %>
       <% end %>
+      <h1 class="mb-0"><%= t("common.produtos", default: "Produtos") %></h1>
     </div>
-    <!-- Card de Produtos -->
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title"><%= t("common.produtos", default: "Produtos") %></h4>
-        </div>
-        <div class="card-body">
-          <!-- Removido o campo de pesquisa aqui -->
-        </div>
-        <!-- Tabela de Produtos -->
-        <div class="table-responsive">
-          <table id="produtosTable" class="table table-striped table-hover display" cellspacing="0" width="100%">
-            <thead>
-              <tr>
-                <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.nome", default: "Nome") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.estabelecimento", default: "Estabelecimento") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.imagem", default: "Imagem") %></th>
-                
-              </tr>
-            </thead>
-            <tfoot>
-              <tr>
-                <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.nome", default: "Nome") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.estabelecimento", default: "Estabelecimento") %></th>
-                
-                  <th><%= t("activerecord.attributes.produto.imagem", default: "Imagem") %></th>
-                
-              </tr>
-            </tfoot>
-            <tbody>
-              <% @produtos.each do |produto| %>
+    <!-- Botão para Criar Novo Produto -->
+    <%= link_to new_produto_path, class: "btn btn-incluir d-flex align-items-center" do %>
+      <i class="fa fa-plus me-2"></i> <%= t("common.new_produto", default: "Incluir") %>
+    <% end %>
+  </div>
+  <!-- Card de Produtos -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"><%= t("common.produtos", default: "Produtos") %></h4>
+      </div>
+      <div class="card-body">
+        <!-- Removido o campo de pesquisa aqui -->
+      </div>
+      <!-- Tabela de Produtos -->
+      <div class="table-responsive">
+        <table id="produtosTable" class="table table-striped table-hover display" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
+              <th><%= t("activerecord.attributes.produto.nome", default: "Nome") %></th>
+              <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
+              <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
+              <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
+              <th><%= t("activerecord.attributes.produto.estabelecimento", default: "Estabelecimento") %></th>
+              <th><%= t("activerecord.attributes.produto.imagem", default: "Imagem") %></th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th class="text-center"><%= t("common.actions", default: "Ações") %></th>
+              <th><%= t("activerecord.attributes.produto.nome", default: "Nome") %></th>
+              <th><%= t("activerecord.attributes.produto.descricao", default: "Descricao") %></th>
+              <th><%= t("activerecord.attributes.produto.preco_unitario", default: "Preco unitario") %></th>
+              <th><%= t("activerecord.attributes.produto.preco_custo", default: "Preco custo") %></th>
+              <th><%= t("activerecord.attributes.produto.estabelecimento", default: "Estabelecimento") %></th>
+              <th><%= t("activerecord.attributes.produto.imagem", default: "Imagem") %></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <% @produtos.each do |produto| %>
               <tr>
                 <td class="text-center">
                   <!-- Dropdown de Ações -->
@@ -77,39 +63,32 @@
                     </ul>
                   </div>
                 </td>
-                
-                  <td><%= produto.nome %></td>
-                
-                  <td><%= produto.descricao %></td>
-                
-                  <td><%= produto.preco_unitario %></td>
-                
-                  <td><%= produto.preco_custo %></td>
-                
-                  <td><%= produto.estabelecimento %></td>
-                
-                  <td><%= produto.imagem %></td>
-                
+                <td><%= produto.nome %></td>
+                <td><%= produto.descricao %></td>
+                <td><%= produto.preco_unitario %></td>
+                <td><%= produto.preco_custo %></td>
+                <td><%= produto.estabelecimento %></td>
+                <td><%= produto.imagem %></td>
               </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-  <!-- Footer Geral -->
-  <%= render "shared/scaffold/footer" %>
-  <!-- Scripts para DataTables -->
-  <script>
-    $(document).ready(function() {
-      var table = $('#produtosTable').DataTable({
-        "paging": true,
-        "searching": false, // Desativa a pesquisa no DataTable
-        "ordering": true,
-        "info": true,
-        "lengthChange": false, // Desativa o ajuste de número de itens por página
-        "pageLength": 10, // Número inicial de itens por página
-      });
+</div>
+<!-- Footer Geral -->
+<%= render "shared/scaffold/footer" %>
+<!-- Scripts para DataTables -->
+<script>
+  $(document).ready(function() {
+    var table = $('#produtosTable').DataTable({
+      "paging": true,
+      "searching": false, // Desativa a pesquisa no DataTable
+      "ordering": true,
+      "info": true,
+      "lengthChange": false, // Desativa o ajuste de número de itens por página
+      "pageLength": 10, // Número inicial de itens por página
     });
-  </script>
+  });
+</script>
