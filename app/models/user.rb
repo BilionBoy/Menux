@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   # Associations
   belongs_to :funcao
+  has_many :users_estabelecimentos
+  has_many :estabelecimentos, through: :users_estabelecimentos
 
   # Validations
   validates :nome, presence: true
