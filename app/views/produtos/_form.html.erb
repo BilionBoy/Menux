@@ -1,15 +1,15 @@
-<%= simple_form_for(@categoria, html: { class: "container-fluid page-inner", style: "margin-top: 20px;" }) do |f| %>
+<%= simple_form_for(@produto, html: { class: "container-fluid page-inner", style: "margin-top: 20px;" }) do |f| %>
   <!-- Cabeçalho do formulário -->
   <div class="page-header p-3 mb-4">
     <div class="d-flex justify-content-between align-items-center">
       <!-- Botão de Voltar e Título -->
       <div class="d-flex align-items-center">
-        <%= link_to categorias_path, class: "btn btn-light d-flex align-items-center me-3" do %>
+        <%= link_to produtos_path, class: "btn btn-light d-flex align-items-center me-3" do %>
           <i class="fas fa-arrow-left me-2"></i> <!-- Ícone de Voltar -->
           <%= t("common.back", default: "Voltar") %>
         <% end %>
       </div>
-      <%= t(".header", default: "Categoria Form") %>
+      <%= t(".header", default: "Produto Form") %>
     </div>
   </div>
   <div class="card">
@@ -28,7 +28,22 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
-            <%= f.association :estabelecimento, collection: Estabelecimento.all, label_method: :nome, value_method: :id, prompt: "Selecione um estabelecimento", input_html: { class: "form-control", style: "max-width: 100%;", title: "Informe estabelecimento" } %>
+            <%= f.input :preco_unitario, input_html: { class: "form-control", style: "max-width: 100%;", placeholder: "Preco unitario", title: "Informe preco unitario" } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <%= f.input :preco_custo, input_html: { class: "form-control", style: "max-width: 100%;", placeholder: "Preco custo", title: "Informe preco custo" } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <%= f.input :categoria, as: :select, collection: Categoria.all, prompt: "Selecione uma categoria", input_html: { class: "form-control", style: "max-width: 100%;", title: "Informe categoria" } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <%= f.input :imagem, as: :file, input_html: { class: "form-control", title: "Selecione uma imagem" } %>
           </div>
         </div>
       </div>
@@ -36,7 +51,7 @@
     <div class="card-footer">
       <!-- Botões do formulário -->
       <%= f.submit t(".save", default: "Salvar"), class: "btn btn-primary" %>
-      <%= link_to t("common.back", default: "Voltar"), categorias_path, class: "btn btn-secondary" %>
+      <%= link_to t("common.back", default: "Voltar"), produtos_path, class: "btn btn-secondary" %>
     </div>
   </div>
 <% end %>

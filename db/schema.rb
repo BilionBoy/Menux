@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_13_120512) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_13_121621) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,17 +42,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_120512) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "cardapios", force: :cascade do |t|
-    t.string "descricao"
-    t.string "valor"
-    t.string "nome"
-    t.string "created_by"
-    t.string "updated_by"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "categorias", force: :cascade do |t|
     t.string "nome", null: false
     t.text "descricao"
@@ -77,6 +66,17 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_120512) do
     t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "produtos", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.decimal "preco_unitario", precision: 10, scale: 2
+    t.decimal "preco_custo", precision: 10, scale: 2
+    t.bigint "categoria_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["categoria_id"], name: "index_produtos_on_categoria_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -114,6 +114,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_120512) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "categorias", "estabelecimentos"
+  add_foreign_key "produtos", "categorias"
   add_foreign_key "users", "funcoes"
   add_foreign_key "users_estabelecimentos", "estabelecimentos"
   add_foreign_key "users_estabelecimentos", "users"

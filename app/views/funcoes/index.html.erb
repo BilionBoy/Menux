@@ -51,7 +51,7 @@
                     <ul class="dropdown-menu" aria-labelledby="acoesDropdown<%= funcao.id %>">
                       <li><%= link_to t("common.show", default: "Ver"), funcao, class: "dropdown-item" %></li>
                       <li><%= link_to t("common.edit", default: "Editar"), edit_funcao_path(funcao), class: "dropdown-item" %></li>
-                      <li><%= link_to t("common.delete", default: "Excluir"), funcao, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
+                      <li><%= button_to t("common.delete", default: "Excluir"), funcao, method: :delete, data: { confirm: t("common.are_you_sure", default: "Tem certeza?") }, class: "dropdown-item text-danger" %></li>
                     </ul>
                   </div>
                 </td>
