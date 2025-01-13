@@ -122,6 +122,66 @@
             </ul>
           </div>
         </li>
+        <!-- Sidebar para Produtos -->
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#produtos">
+            <i class="fas fa-box"></i>
+            <p>Produtos</p>
+            <span class="caret"></span>
+          </a>
+          <div class="collapse" id="produtos">
+            <ul class="nav nav-collapse">
+              <li>
+                <a href="<%= new_produto_path %>">
+                  <span class="sub-item">Cadastrar Produto</span>
+                </a>
+              </li>
+              <li>
+                <a href="<%= produtos_path %>">
+                  <span class="sub-item">Listar Produtos</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Sidebar para Categorias -->
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#categorias">
+            <i class="fas fa-tags"></i>
+            <p>Categorias</p>
+            <span class="caret"></span>
+          </a>
+          <div class="collapse" id="categorias">
+            <ul class="nav nav-collapse">
+              <li>
+                <a href="<%= new_categoria_path %>">
+                  <span class="sub-item">Cadastrar Categoria</span>
+                </a>
+              </li>
+              <li>
+                <a href="<%= categorias_path %>">
+                  <span class="sub-item">Listar Categorias</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="#categoriasprodutos">
+            <i class="fas fa-tags"></i>
+            <p>Categorias & Produtos</p>
+            <span class="caret"></span>
+          </a>
+          <div class="collapse" id="categoriasprodutos">
+            <ul class="nav nav-collapse">
+              <li>
+                <a href="<%= categoria_produtos_path %>">
+                  <span class="sub-item">Painel Admnistrativo</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
