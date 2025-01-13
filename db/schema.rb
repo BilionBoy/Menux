@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_13_035050) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_13_120512) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,15 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_035050) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "categorias", force: :cascade do |t|
+    t.string "nome", null: false
+    t.text "descricao"
+    t.bigint "estabelecimento_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["estabelecimento_id"], name: "index_categorias_on_estabelecimento_id"
   end
 
   create_table "estabelecimentos", force: :cascade do |t|
@@ -104,6 +113,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_035050) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "categorias", "estabelecimentos"
   add_foreign_key "users", "funcoes"
   add_foreign_key "users_estabelecimentos", "estabelecimentos"
   add_foreign_key "users_estabelecimentos", "users"
