@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :produtos
-  resources :categorias
   # Index
   devise_for :users, controllers: { registrations: "users/registrations" }
   root "home#index"
@@ -10,6 +8,8 @@ Rails.application.routes.draw do
   resources :funcoes
   resources :estabelecimentos
   resources :users_estabelecimentos
+  resources :produtos
+  resources :categorias
 
   # Status HTTP da aplicação
   get "up" => "rails/health#show", as: :rails_health_check
