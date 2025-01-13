@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  # Index
   devise_for :users, controllers: { registrations: "users/registrations" }
+  # Index
   root "home#index"
   get "home/index"
+  get "usuarios/index"
 
   # Rotas Dinâmicas
   resources :funcoes
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   resources :users_estabelecimentos
   resources :produtos
   resources :categorias
+  resources :usuarios, only: [ :index, :show, :destroy ] # Adicionando a rota :destroy
 
   # Status HTTP da aplicação
   get "up" => "rails/health#show", as: :rails_health_check
