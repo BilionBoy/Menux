@@ -38,7 +38,9 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
-            <%= f.input :categoria_id, as: :select, collection: Categoria.all, label_method: :nome, value_method: :id, prompt: "Selecione uma categoria", input_html: { class: "form-control", style: "max-width: 100%;", title: "Informe categoria" } %>
+            <%= f.input :categoria_id, as: :select, collection: @categorias, label_method: :nome, value_method: :id, prompt: "Selecione uma categoria", input_html: { class: "form-control", style: "max-width: 100%;", title: "Informe categoria" } %>
+            <%# <%= f.association :estabelecimento, collection: Estabelecimento.all, label_method: :nome, value_method: :id, prompt: "Selecione um estabelecimento", input_html: { class: "form-control", style: "max-width: 100%;", title: "Informe estabelecimento" } %> 
+          
           </div>
         </div>
         <div class="row">

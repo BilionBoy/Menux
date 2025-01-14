@@ -2,8 +2,8 @@
 
 class Categoria < ApplicationRecord
   # Adicione aqui quaisquer metódos
-  has_many :produtos
-  belongs_to :estabelecimento
+  belongs_to :estabelecimento # Cada categoria pertence a um estabelecimento
+  has_many :produtos          # Uma categoria pode ter muitos produtos
 
   # Adicione aqui quaisquer validações
   validates :estabelecimento_id, presence: true  # Se o estabelecimento for obrigatório

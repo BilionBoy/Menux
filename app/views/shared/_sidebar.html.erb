@@ -145,7 +145,7 @@
           </div>
         </li>
         <!-- Sidebar para Produtos -->
-        <% if current_user.estabelecimentos.any? %>
+        <% if current_user && current_user.estabelecimentos.any? %>
           <li class="nav-item">
             <a data-bs-toggle="collapse" href="#produtos">
               <i class="fas fa-box"></i>

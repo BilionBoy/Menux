@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   # Definir layout com base no tipo de usuário (tem ou não estabelecimento)
-  before_action :set_layout
+  before_action :set_layout, if: :user_signed_in?, unless: :devise_controller?
 
   private
 

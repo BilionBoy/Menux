@@ -5,6 +5,8 @@ class Estabelecimento < ApplicationRecord
 
   has_many :users_estabelecimentos
   has_many :users, through: :users_estabelecimentos
+  has_many :categorias # Estabelecimento tem muitas categorias
+  has_many :produtos, through: :categorias # Estabelecimento tem muitos produtos através de Categoria.
 
   # Adicione aqui quaisquer validações
   validates :nome, presence: true

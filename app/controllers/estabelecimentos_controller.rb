@@ -8,7 +8,7 @@ class EstabelecimentosController < ApplicationController
 
   # GET /estabelecimentos/1 or /estabelecimentos/1.json
   def show
-    @estabelecimento = Estabelecimento.all
+    @estabelecimento = Estabelecimento.find(params[:id])
   end
 
   # GET /estabelecimentos/new
