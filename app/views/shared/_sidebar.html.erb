@@ -145,27 +145,29 @@
           </div>
         </li>
         <!-- Sidebar para Produtos -->
-        <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#produtos">
-            <i class="fas fa-box"></i>
-            <p>Produtos</p>
-            <span class="caret"></span>
-          </a>
-          <div class="collapse" id="produtos">
-            <ul class="nav nav-collapse">
-              <li>
-                <a href="<%= produtos_path %>">
-                  <span class="sub-item">Listar Produtos</span>
-                </a>
-              </li>
-              <li>
-                <a href="<%= new_produto_path %>">
-                  <span class="sub-item">Cadastrar Produto</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
+        <% if current_user.estabelecimentos.any? %>
+          <li class="nav-item">
+            <a data-bs-toggle="collapse" href="#produtos">
+              <i class="fas fa-box"></i>
+              <p>Produtos</p>
+              <span class="caret"></span>
+            </a>
+            <div class="collapse" id="produtos">
+              <ul class="nav nav-collapse">
+                <li>
+                  <a href="<%= produtos_path(current_user.estabelecimentos.first) %>">
+                    <span class="sub-item">Listar Produtos</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="<%= new_produto_path(current_user.estabelecimentos.first) %>">
+                    <span class="sub-item">Cadastrar Produto</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
