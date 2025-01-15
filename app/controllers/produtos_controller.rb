@@ -34,19 +34,6 @@ class ProdutosController < ApplicationController
     @categoria = Categoria.find(produto_params[:categoria_id])
     # Rails.logger.debug(@categorias.inspect)
     @produto.save
-    
-    # if categoria.estabelecimento == @estabelecimento
-    #   @produto.categoria = categoria
-    #   if @produto.save
-    #     redirect_to @produto, notice: "Produto criado com sucesso."
-    #   else
-    #     Rails.logger.debug("Erro ao salvar produto: #{@produto.errors.full_messages}")
-    #     render :new
-    #   end
-    # else
-    #   flash[:alert] = "A categoria selecionada não pertence ao seu estabelecimento."
-    #   render :new
-    # end
   end
 
   # PATCH/PUT /produtos/1 or /produtos/1.json

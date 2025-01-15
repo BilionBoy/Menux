@@ -1,9 +1,10 @@
 class CategoriasController < ApplicationController
+  before_action :set_estabelecimento
   before_action :set_categoria, only: %i[ show edit update destroy ]
 
   # GET /categorias or /categorias.json
   def index
-    @categorias = Categoria.includes(:estabelecimento).all
+    @categorias = @estabelecimento.categorias
   end
 
   # GET /categorias/1 or /categorias/1.json
@@ -21,13 +22,12 @@ class CategoriasController < ApplicationController
 
   # POST /categorias or /categorias.json
   def create
-    @categoria = Categoria.new(categoria_params)
-    puts params[:categoria]  # Verifique se os parâmetros estão sendo enviados corretamente
+    @categoria = @estabelecimento.categorias.build(categoria_params)
 
 
     respond_to do |format|
       if @categoria.save
-        format.html { redirect_to @categoria, notice: "Categoria was successfully created." }
+        format.html { redirect_to @categoria, notice: "Categoria criada com sucesso." }
         format.json { render :show, status: :created, location: @categoria }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,12 +35,11 @@ class CategoriasController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /categorias/1 or /categorias/1.json
   def update
     respond_to do |format|
       if @categoria.update(categoria_params)
-        format.html { redirect_to @categoria, notice: "Categoria was successfully updated." }
+        format.html { redirect_to @categoria, notice: "Categoria Atualizada com sucesso." }
         format.json { render :show, status: :ok, location: @categoria }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -59,14 +58,22 @@ class CategoriasController < ApplicationController
     end
   end
 
+  def set_estabelecimento
+    @estabelecimento = current_user.estabelecimentos.first
+    unless @estabelecimento
+      redirect to root_path, alert: "Você não tem um estabelecimento associado."
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_categoria
-      @categoria = Categoria.find(params[:id])
+      @categoria = @estabelecimento.categorias.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to categorias_path, alert: "Categoria não encontrada ou não pertence ao seu estabelecimento."
     end
 
-    # Only allow a list of trusted parameters through.
-    def categoria_params
-      params.require(:categoria).permit(:nome, :descricao, :estabelecimento_id)
-    end
+   # Permite parâmetros seguros para a categoria
+   def categoria_params
+    params.require(:categoria).permit(:nome, :descricao)
+   end
 end
