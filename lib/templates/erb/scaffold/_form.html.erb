@@ -17,15 +17,16 @@
     <!-- Campos do formulário -->
     <div class="form-inputs">
       <%- attributes.each do |attribute| -%>
-        <div class="row">
-          <div class="col-12 col-md-6 mb-3">
+        <div class="row mb-3">
+          <div class="col-12 col-md-6">
+            <!-- Exibe o campo de entrada ou associação (FK) de forma responsiva -->
             <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>, input_html: { class: "form-control", style: "max-width: 100%;", placeholder: "<%= attribute.name.humanize %>", title: "Informe <%= attribute.name.humanize.downcase %>" } %>
           </div>
         </div>
       <%- end -%>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer d-flex justify-content-between">
     <!-- Botões do formulário -->
     <%%= f.submit t(".save", default: "Salvar"), class: "btn btn-primary" %>
     <%%= link_to t("common.back", default: "Voltar"), <%= plural_table_name %>_path, class: "btn btn-secondary" %>
