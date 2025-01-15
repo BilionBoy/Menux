@@ -12,7 +12,7 @@
       <%= t(".header", default: "Produto Form") %>
     </div>
   </div>
-  <div class="card">
+  <div class="card container-fluid">
     <div class="card-body">
       <!-- Campos do formulário -->
       <div class="form-inputs">
@@ -26,7 +26,7 @@
             <%= f.input :descricao, input_html: { class: "form-control", style: "max-width: 100%;", placeholder: "Descricao", title: "Informe descricao" } %>
           </div>
         </div>
-        <div class="row">
+        <div class="row  flex-column ">
           <div class="col-12 col-md-6 mb-3">
             <%= f.input :preco_unitario, input_html: { class: "form-control", style: "max-width: 100%;", placeholder: "Preco unitario", title: "Informe preco unitario" } %>
           </div>
@@ -46,12 +46,18 @@
             <%= f.input :imagem, as: :file, input_html: { class: "form-control", title: "Selecione uma imagem" } %>
           </div>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <%= f.input :estoque, input_html: {class: "form-control", style: "max-width: 100%;", placeholder: "Estoque", title: "Informe a quantidade no estoque"} %>
+         </div>
+        </div>
+        
+      </div> 
     </div>
     <div class="card-footer">
       <!-- Botões do formulário -->
       <%= f.submit t(".save", default: "Salvar"), class: "btn btn-primary" %>
-      <%= link_to t("common.back", default: "Voltar"), produtos_path, class: "btn btn-secondary" %>
-    </div>
-  </div>
-<% end %>
+            <%= link_to t("common.back", default: "Voltar"), produtos_path, class: "btn btn-secondary" %>
+          </div>
+        </div>
+      <% end %>

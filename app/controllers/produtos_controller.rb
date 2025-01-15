@@ -8,7 +8,7 @@ class ProdutosController < ApplicationController
 
   # GET /produtos/1 or /produtos/1.json
   def show
-    @produto = Produto.find(params[:id])
+    # @produto já foi definido pelo before_action :set_produto
   end
 
   # GET /produtos/new
@@ -23,7 +23,6 @@ class ProdutosController < ApplicationController
   # POST /produtos or /produtos.json
   def create
     @produto = Produto.new(produto_params)
-    puts params[:categoria]  # Adicione essa linha para verificar os parâmetros recebidos
 
     respond_to do |format|
       if @produto.save
@@ -51,7 +50,7 @@ class ProdutosController < ApplicationController
 
   # DELETE /produtos/1 or /produtos/1.json
   def destroy
-    @produto.destroy!
+    @produto.destroy
 
     respond_to do |format|
       format.html { redirect_to produtos_path, status: :see_other, notice: "Produto was successfully destroyed." }
@@ -60,6 +59,7 @@ class ProdutosController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_produto
       @produto = Produto.find(params[:id])
@@ -67,6 +67,6 @@ class ProdutosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def produto_params
-      params.require(:produto).permit(:nome, :descricao, :preco_unitario, :preco_custo, :categoria_id, :imagem)
+      params.require(:produto).permit(:nome, :descricao, :preco_unitario, :preco_custo, :categoria_id, :imagem, :estoque)
     end
 end
