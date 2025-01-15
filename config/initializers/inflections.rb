@@ -15,4 +15,5 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular "venda", "vendas"
   inflect.irregular "vendas_item_pedido", "vendas_item_pedidos"
   inflect.irregular "ticket", "tickets"
+  inflect.irregular "tipo_compra", "tipo_compras"
 end

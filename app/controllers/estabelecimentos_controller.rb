@@ -3,14 +3,16 @@ class EstabelecimentosController < ApplicationController
 
   # GET /estabelecimentos or /estabelecimentos.json
   def index
-    @estabelecimentos = Estabelecimento.all
+    @estabelecimentos = current_user.estabelecimentos
   end
 
   # GET /estabelecimentos/1 or /estabelecimentos/1.json
   def show
-    @estabelecimento = Estabelecimento.find(params[:id])
+    # Verifica se o estabelecimento pertence ao usuário logado
+    unless current_user.estabelecimentos.exists?(@estabelecimento.id)
+      redirect_to estabelecimentos_path, alert: "Você não tem permissão para visualizar este estabelecimento."
+    end
   end
-
   # GET /estabelecimentos/new
   def new
     @estabelecimento = Estabelecimento.new
@@ -18,6 +20,9 @@ class EstabelecimentosController < ApplicationController
 
   # GET /estabelecimentos/1/edit
   def edit
+    unless current_user.estabelecimentos.exists?(@estabelecimento.id)
+      redirect_to estabelecimento_path, alert: "Você não tem permissão para editar"
+    end
   end
 
   # POST /estabelecimentos or /estabelecimentos.json
@@ -26,7 +31,9 @@ class EstabelecimentosController < ApplicationController
 
     respond_to do |format|
       if @estabelecimento.save
-        format.html { redirect_to @estabelecimento, notice: "Estabelecimento was successfully created." }
+        # Associa o estabelecimento ao usuário logado
+        current_user.estabelecimentos << @estabelecimento
+        format.html { redirect_to @estabelecimento, notice: "Estabelecimento foi criado com sucesso." }
         format.json { render :show, status: :created, location: @estabelecimento }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -62,7 +69,7 @@ class EstabelecimentosController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_estabelecimento
-    @estabelecimento = Estabelecimento.find(params[:id])
+    @estabelecimento = current_user.estabelecimentos.find_by(id: params[:id])
   end
 
   # Only allow a list of trusted parameters through.

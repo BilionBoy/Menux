@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Devise Modules
   devise :database_authenticatable, :registerable,
@@ -5,7 +7,7 @@ class User < ApplicationRecord
 
   # Associations
   belongs_to :funcao
-  has_many :users_estabelecimentos
+  has_many :users_estabelecimentos, dependent: :destroy
   has_many :estabelecimentos, through: :users_estabelecimentos
 
   # Validations

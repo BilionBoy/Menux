@@ -3,7 +3,9 @@ class FuncoesController < ApplicationController
 
   # GET /funcoes or /funcoes.json
   def index
-    @funcoes = Funcao.all
+    @funcoes = Funcao.joins(:users)
+                     .where(users: { id: current_user.id })
+                     .distinct
   end
 
   # GET /funcoes/1 or /funcoes/1.json
@@ -62,8 +64,15 @@ class FuncoesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_funcao
-    @funcao = Funcao.find(params[:id])
+    @funcao = Funcao.joins(:users)
+                    .where(users: { id: current_user.id })
+                    .find_by(id: params[:id])
+
+    unless @funcao
+      redirect_to funcoes_path, alert: "Você não tem acesso a esta função."
+    end
   end
+
 
   # Only allow a list of trusted parameters through.
   def funcao_params
