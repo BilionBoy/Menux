@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "home/index"
   get "usuarios/index"
+  get "landing/index"
 
   # Rotas Dinâmicas
   resources :funcoes
