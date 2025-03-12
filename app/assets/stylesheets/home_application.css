@@ -1,110 +1,132 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css");
 /* Importando as fontes do Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 
+/* Corpo da página */
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif; /* Mudando para Poppins */
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   background-color: white;
+  color: #333; /* Cor de texto padrão para melhorar a legibilidade */
+}
+
+/* Parágrafos e textos */
+p,
+li,
+span {
+  font-family: "Poppins"; /* Usando Merriweather para parágrafos */
+  font-weight: 400;
+  color: #ffffff; /* Cor mais suave para o texto */
 }
 
 /* Títulos */
-a {
-  color: #161616;
-  font-weight: bold;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif; /* Usando Poppins para os títulos */
   font-weight: 700;
   margin-bottom: 10px;
   color: #222;
 }
 
-h1.mb-4,
-mb0 {
-  color: #222;
+/* Link */
+a {
+  color: #161616;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
-p,
-li,
-span {
-  color: white;
-  font-weight: 400;
-}
-
+/* Estilo para textos em negrito */
 strong,
 b {
   font-weight: 600;
 }
 
-.nav-link {
-  color: #161616 !important;
-}
-
 /* SIDEBAR */
-
 .sidebar[data-background-color="dark"] {
-  background: #010825 !important;
+  background: #121212 !important;
 }
 
 .logo-header[data-background-color="dark"] {
-  background: #010825 !important;
+  background: #121212 !important;
 }
 
-.sidebar .nav.nav-secondary>.nav-item a:hover i,
-/* cores ícones do sidebar */
-.sidebar .nav.nav-secondary>.nav-item a:focus i,
-.sidebar .nav.nav-secondary>.nav-item a[data-toggle=collapse][aria-expanded=true] i,
-.sidebar[data-background-color="white"] .nav.nav-secondary>.nav-item a:hover i,
-.sidebar[data-background-color="white"] .nav.nav-secondary>.nav-item a:focus i,
-.sidebar[data-background-color="white"] .nav.nav-secondary>.nav-item a[data-toggle=collapse][aria-expanded=true] i {
+/* Estilo dos ícones */
+.sidebar .nav.nav-secondary > .nav-item a:hover i,
+.sidebar .nav.nav-secondary > .nav-item a:focus i {
   color: #ffffff !important;
 }
 
-.sidebar
-  .nav.nav-secondary
-  > .nav-item
-  a[data-toggle="collapse"][aria-expanded="true"]:before,
-.sidebar[data-background-color="white"]
-  .nav.nav-secondary
-  > .nav-item
-  a[data-toggle="collapse"][aria-expanded="true"]:before {
-  background: #ffffff !important;
+/* Botões */
+.btn-incluir {
+  padding: 0.65rem 1.4rem;
+  background-color: #1572e8;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  font-family: "Poppins", sans-serif; /* Mudando para Poppins */
 }
 
-.sidebar .nav.nav-secondary > .nav-item.active a:before,
-.sidebar[data-background-color="white"]
-  .nav.nav-secondary
-  > .nav-item.active
-  a:before {
-  background: #ffffff !important;
+.btn-incluir:hover {
+  background-color: #1572e8;
+  color: white;
 }
 
-.sidebar .nav.nav-secondary > .nav-item.active a i,
-.sidebar[data-background-color="white"]
-  .nav.nav-secondary
-  > .nav-item.active
-  a
-  i {
+.btn-secondary {
+  background: #005171 !important;
+  background-color: #005171 !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:disabled {
   color: #ffffff !important;
+  background: #005171 !important;
+  border-color: #005171 !important;
 }
 
-.sidebar .nav.nav-secondary>.nav-item .nav-collapse li.active>a,
-/* cores scroll do sidebar */
-.sidebar[data-background-color="white"] .nav.nav-secondary>.nav-item .nav-collapse li.active>a {
-  color: #ffffff !important;
+/* Tabela */
+#funcoesTable th,
+#funcoesTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
 }
 
+#funcoesTable th {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+#funcoesTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#funcoesTable th:last-child,
+#funcoesTable td:last-child {
+  border-right: none;
+}
+
+#funcoesTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-header {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
 .display-6 {
   justify-content: center;
   display: flex;
@@ -114,7 +136,7 @@ b {
 
 /* NAVBAR */
 .main-header {
-  background: #010825 !important;
+  background: #121212 !important;
   min-height: 60px;
   width: calc(100% - 250px);
   position: fixed;

@@ -1,5 +1,5 @@
 class EstabelecimentosController < ApplicationController
-  before_action :set_estabelecimento, only: %i[ show edit update destroy ]
+  before_action :set_estabelecimento, only: %i[show edit update destroy]
 
   # GET /estabelecimentos or /estabelecimentos.json
   def index
@@ -8,7 +8,8 @@ class EstabelecimentosController < ApplicationController
 
   # GET /estabelecimentos/1 or /estabelecimentos/1.json
   def show
-    @estabelecimento = Estabelecimento.all
+    # Aqui, buscamos o Estabelecimento pelo ID.
+    # Esta linha já está sendo feita no before_action, então não é necessário reescrever aqui.
   end
 
   # GET /estabelecimentos/new
@@ -50,10 +51,10 @@ class EstabelecimentosController < ApplicationController
 
   # DELETE /estabelecimentos/1 or /estabelecimentos/1.json
   def destroy
-    @estabelecimento.destroy!
+    @estabelecimento.destroy
 
     respond_to do |format|
-      format.html { redirect_to estabelecimentos_path, status: :see_other, notice: "Estabelecimento was successfully destroyed." }
+      format.html { redirect_to estabelecimentos_url, notice: "Estabelecimento was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -63,6 +64,9 @@ class EstabelecimentosController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_estabelecimento
     @estabelecimento = Estabelecimento.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    flash[:alert] = "Estabelecimento não encontrado."
+    redirect_to estabelecimentos_path
   end
 
   # Only allow a list of trusted parameters through.

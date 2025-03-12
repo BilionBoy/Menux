@@ -31,6 +31,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduz os tempos de inicialização por meio de cache; necessário em config/boot.rb
 gem "bootsnap", require: false
 
+
+gem "htmlbeautifier"
+
 # Use variantes do Active Storage [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -81,6 +84,7 @@ gem "caxlsx_rails"
 
 # Nested Forms
 gem "cocoon"
+gem "mini_magick"
 
 # Identificador Unico Universal
 # gem "uuid"

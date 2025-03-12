@@ -30,6 +30,12 @@
           </div>
           <div class="col-12 col-md-6">
             <%= f.input :imagem, as: :file, input_html: { class: "form-control", title: "Selecione uma imagem" } %>
+            <% if @produto.imagem.attached? %>
+              <div class="mt-2">
+                <h5>Imagem Atual:</h5>
+                <%= image_tag @produto.imagem.variant(resize: "300x300") %> <!-- Exibe a imagem em miniatura -->
+              </div>
+            <% end %>
           </div>
           <div class="col-12 col-md-6">
             <%= f.input :preco_unitario, input_html: { class: "form-control", placeholder: "Preço unitário", title: "Informe preço unitário" } %>
@@ -37,8 +43,6 @@
           <div class="col-12 col-md-6">
             <%= f.input :preco_custo, input_html: { class: "form-control", placeholder: "Preço de custo", title: "Informe preço de custo" } %>
           </div>
-        </div>
-        <div class="row mb-3">
         </div>
         <div class="row mb-3">
           <div class="col-12 col-md-6">
