@@ -7,13 +7,7 @@ Rails.application.routes.draw do
   get "landing/index"
 
   # Rotas Dinâmicas
-  resources :funcoes
-  resources :estabelecimentos
-  resources :users_estabelecimentos
-  resources :produtos
-  resources :categorias
   resources :usuarios, only: [ :index, :show, :destroy ] # Adicionando a rota :destroy
-  resources :pedidos
 
 
   # Status HTTP da aplicação

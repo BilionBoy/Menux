@@ -245,3 +245,9 @@ b {
   font-weight: bold;
   font-size: 1.2em;
 }
+
+@media (min-width: 992px) {
+  .nav-toggle {
+    display: none !important;
+  }
+}
